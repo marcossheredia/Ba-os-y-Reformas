@@ -123,17 +123,17 @@ const navItems = ref([
     ]
   },
   { 
-    name: 'SERVICIO', 
+    name: 'SERVICIO 1' , 
     path: '', 
-    title: 'Nuestros servicios profesionales en acero inoxidable y soldadura industrial', 
+    title: 'Nuestros servicios profesionales en acero inoxidable y soldadura industrial',  // esto es para cuando dejas en raton sobre el boton la info que sale
     ariaLabel: 'Servicios', 
     keywords: 'servicios industriales, acero inoxidable, soldadura, soluciones',
     hasSubmenu: true,
     submenu: [
-      { name: 'NUESTROS SERVICIOS', path: '/servicios', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
-      { name: 'ASÍ FUNCIONA', path: '/servicios#asi-funciona', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
+      { name: 'Servicio 1.1', path: '/servicios', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
+      { name: 'Servicio 1.2', path: '/servicios#asi-funciona', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
       { 
-        name: 'TIPOS DE SOLDADURA', 
+        name: 'Servicio 1.3', 
         path: '/todo-servicios', 
         title: 'Diferentes técnicas de soldadura industrial que ofrecemos', 
         ariaLabel: 'Tipos de soldadura',
@@ -142,7 +142,7 @@ const navItems = ref([
     ]
   },
   { 
-    name: 'LABORATORIO', 
+    name: 'SERVICIO 2', 
     path: '/laboratorio', 
     title: 'Nuestro laboratorio de análisis y control de calidad', 
     ariaLabel: 'Laboratorio', 
@@ -150,29 +150,29 @@ const navItems = ref([
     hasSubmenu: false
   },
   { 
-    name: 'MAQUINARIA', 
+    name: 'SERVICIO 3', 
     path: '', 
     title: 'Nuestra maquinaria industrial especializada', 
     ariaLabel: 'Maquinaria', 
     keywords: 'maquinaria industrial, equipos, tecnología',
     hasSubmenu: true,
     submenu: [
-      { name: 'NUESTRAS INSTALACIONES', path: '/maquinaria/instalaciones', title: 'Instalaciones y equipamiento técnico', ariaLabel: 'Nuestras instalaciones' },
-      { name: 'INDUSTRIA', path: '/maquinaria/industria', title: 'Soluciones para la industria con nuestra maquinaria', ariaLabel: 'Industria' }
+      { name: 'Servicio 3.1', path: '/maquinaria/instalaciones', title: 'Instalaciones y equipamiento técnico', ariaLabel: 'Nuestras instalaciones' },
+      { name: 'Servicio 3.2', path: '/maquinaria/industria', title: 'Soluciones para la industria con nuestra maquinaria', ariaLabel: 'Industria' }
     ]
   },
   { 
-    name: 'PROCESOS AUXILIARES', 
+    name: 'SERVICIO 4', 
     path: '', 
     title: 'Procesos auxiliares y servicios adicionales', 
     ariaLabel: 'Procesos Auxiliares', 
     keywords: 'procesos auxiliares, servicios adicionales',
     hasSubmenu: true,
     submenu: [
-      { name: 'TRANSFORMACIÓN METALÚRGICAS', path: '/procesos-auxiliares#transformacion', title: 'Servicios de transformación metalúrgica', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
-      { name: 'TRATAMIENTO DE SUPERFICIES', path: '/procesos-auxiliares#tratamiento', title: 'Tratamientos de superficies metálicas', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
-      { name: 'MODULACIÓN', path: '/procesos-auxiliares#modulacion', title: 'Servicios de modulación industrial', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
-      { name: 'LOGÍSTICA', path: '/procesos-auxiliares#logistica', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' }
+      { name: 'Servicio 4.1', path: '/procesos-auxiliares#transformacion', title: 'Servicios de transformación metalúrgica', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
+      { name: 'Servicio 4.2', path: '/procesos-auxiliares#tratamiento', title: 'Tratamientos de superficies metálicas', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
+      { name: 'Servicio 4.3', path: '/procesos-auxiliares#modulacion', title: 'Servicios de modulación industrial', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
+      { name: 'Servicio 4.4', path: '/procesos-auxiliares#logistica', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' }
     ]
   },
   { 
