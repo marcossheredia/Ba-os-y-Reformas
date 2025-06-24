@@ -1,0 +1,88 @@
+@import './base.css';
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* Remove default margin from #app */
+#app {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* Base container style */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Global link styling */
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #F6911D;
+}
+
+/* Hero section styling */
+.hero {
+  padding: 6rem 0 4rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+/* Section styling */
+section {
+  padding: 4rem 0;
+}
+
+.content {
+  background-color: #fff;
+}
+
+.clientes {
+  background-color: #f5f5f5;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #F6911D;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}

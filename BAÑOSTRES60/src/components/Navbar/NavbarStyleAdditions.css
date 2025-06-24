@@ -1,0 +1,88 @@
+/* Estilos adicionales para la navegación móvil */
+@media (max-width: 768px) {
+  /* Aumentar ancho del menú para mejor visualización */
+  .nav-menu {
+    width: 90% !important;
+    max-width: 380px !important; /* Aumentado de 320px */
+  }  /* Mejorar la visualización en dispositivos móviles */
+  .nav-link {
+    padding: 1rem 0.5rem !important;
+    text-align: left !important;
+    border-radius: 4px !important;
+  }
+
+  .nav-link span, 
+  .submenu-link span {
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-wrap: wrap !important;
+    line-height: 1.3 !important;
+    display: block !important;
+    width: 100% !important;
+    font-weight: 500 !important;
+  }
+    /* Mejorar el espacio y la visualización en dispositivos móviles para submenús */
+  .nested-submenu.active {
+    margin-left: 1.4rem !important;
+    background-color: rgba(246, 145, 29, 0.07) !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0.5rem !important;
+    border-radius: 4px !important;
+  }
+  
+  /* Destacar más el borde de los submenús */
+  .submenu.active, .nested-submenu.active {
+    border-left: 3px solid #F6911D !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  /* Añadir margen inferior entre elementos de menú para mejor separación */
+  .nav-item {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Mejorar el tamaño de fuente para MIG-MAG submenú en móviles */
+  .nested-submenu .submenu-link {
+    font-size: 1rem !important;
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+  }
+    /* Ajustes adicionales para mejorar la legibilidad */
+  .submenu-link {
+    padding: 0.8rem 1.2rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0.2rem !important;
+  }
+    /* Mejor indicación visual para elementos con submenús */
+  .has-submenu > .nav-link::after,
+  .has-submenu > .submenu-link::after {
+    content: "" !important; /* Eliminamos las flechas */
+    display: none !important;
+  }
+  
+  /* Cambiar el indicador cuando el submenú está activo */
+  .submenu-active > .nav-link::after,
+  .submenu-active > .submenu-link::after {
+    content: "" !important; /* Eliminamos las flechas */
+    display: none !important;
+  }
+  
+  /* Añadir indentación visual para niveles de menú */
+  .submenu {
+    padding-left: 0.5rem !important;
+  }
+  
+  .nested-submenu {
+    padding-left: 0.5rem !important;
+  }
+  
+  /* Mejorar la visualización de elementos activos */
+  .submenu-active > .nav-link,
+  .submenu-active > .submenu-link {
+    color: #F6911D !important;
+    font-weight: 500 !important;
+  }
+}
+
