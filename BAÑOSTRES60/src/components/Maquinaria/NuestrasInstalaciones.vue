@@ -1,47 +1,51 @@
 <template>
-  <v-container class="py-6 contenedor-centrado">
-    <!-- Título -->
-    <v-row justify="center" class="mb-8 text-center">
-      <v-col cols="12">
-        <h1 class="title">Descubre nuestras Instalaciones</h1>
-        <v-divider class="mx-auto divider-naranja" :thickness="4" width="100" />
-      </v-col>
-    </v-row>
+    <div>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='src/assets/imagenes/Grifos/Gr 1/1.1.JPG'
+            alt="Descripción de la imagen 1"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
 
-    <!-- Descripción -->
-    <v-row justify="center" class="mb-10">
-      <v-col cols="12" md="10">
-        <div class="descripcion-box">
-          <p class="subtitle">
-            Las instalaciones de <strong>SSAB</strong> están cuidadosamente diseñadas y configuradas para 
-            <strong>rentabilizar los procesos de producción</strong>, ofreciendo un entorno 
-            <strong>eficiente y adaptado</strong> que facilita la labor a nuestros operarios y garantiza resultados de calidad.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
+          </div>
+        </v-col>
 
-    <!-- Galería 2x2 -->
-    <v-row justify="center">
-      <v-col cols="12" md="10">
-        <div class="galeria-box">
-          <v-row justify="center" align="stretch" dense>
-            <v-col cols="12" md="6" class="d-flex justify-center">
-              <div class="imagen-wrapper">
-                <img src="@/assets/imagenes/Nuestrasinstalaciones/planta/_S0A7364.webp" alt="Vista general de la planta industrial SSAB" class="imagen-instalacion" loading="lazy" />
-              </div>
-            </v-col>
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= 'src/assets/imagenes/Grifos/Gr 1/1.2.JPG'
+            alt="Descripción de la imagen 2"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
 
-            <v-col cols="12" md="6" class="d-flex justify-center">
-              <div class="imagen-wrapper">
-                <img src="@/assets/imagenes/Nuestrasinstalaciones/planta/_S0A7367.webp" alt="Entorno optimizado para producción en SSAB" class="imagen-instalacion" loading="lazy" />
-              </div>
-            </v-col>
-          </v-row>
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= 'src/assets/imagenes/Grifos/Gr 1/1.3.JPG'
+            alt="Descripción de la imagen 3"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+
 </template>
 
 <script setup>

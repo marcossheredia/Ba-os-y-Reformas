@@ -161,7 +161,7 @@ const navItems = ref([
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Servicio 3.1', path: '/maquinaria/instalaciones', title: 'Instalaciones y equipamiento técnico', ariaLabel: 'Nuestras instalaciones' },
-      { name: 'Servicio 3.2', path: '/maquinaria/industria', title: 'Soluciones para la industria con nuestra maquinaria', ariaLabel: 'Industria' }
+    //  { name: 'Servicio 3.2', path: '/maquinaria/industria', title: 'Soluciones para la industria con nuestra maquinaria', ariaLabel: 'Industria' }
     ]
     //*/
   },
@@ -175,9 +175,10 @@ const navItems = ref([
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Servicio 4.1', path: '/procesos-auxiliares#transformacion', title: 'Servicios de transformación metalúrgica', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
-      { name: 'Servicio 4.2', path: '/procesos-auxiliares#tratamiento', title: 'Tratamientos de superficies metálicas', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
+      /*{ name: 'Servicio 4.2', path: '/procesos-auxiliares#tratamiento', title: 'Tratamientos de superficies metálicas', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
       { name: 'Servicio 4.3', path: '/procesos-auxiliares#modulacion', title: 'Servicios de modulación industrial', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
       { name: 'Servicio 4.4', path: '/procesos-auxiliares#logistica', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' }
+    */
     ]
     //*/
   },

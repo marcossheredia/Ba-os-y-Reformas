@@ -1,93 +1,51 @@
 <template>
-  <v-container class="py-6 contenedor-centrado">
-    <v-row justify="center" class="mb-8 text-center">
-      <v-col cols="12">
-        <h1 class="title">Procesos Auxiliares y Logística</h1>
-        <v-divider class="mx-auto divider-naranja" :thickness="4" width="100" />
-      </v-col>
-    </v-row>
+    <div>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='src/assets/imagenes/Grifos/Gr 1/1.1.JPG'
+            alt="Descripción de la imagen 1"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
 
-    <!-- TRANSFORMACIONES METALÚRGICAS -->
-    <v-row class="mb-8">
-      <v-col cols="12">
-        <div class="bloque">
-          <h2 class="section-title">Transformaciones Metalúrgicas</h2>
-          <ul class="custom-list">
-            <li>Corte de precisión en diferentes materiales</li>
-            <li>Plegado profesional con maquinaria avanzada</li>
-          </ul>
-          <div class="galeria">
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Tranformacion Metalurgica/descarga.jpg" alt="Transformación 1" loading="lazy" />
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Tranformacion Metalurgica/descarga.jpg" alt="Transformación 2" loading="lazy" />
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Tranformacion Metalurgica/descarga.jpg" alt="Transformación 3" loading="lazy" />
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
           </div>
-        </div>
-      </v-col>
-    </v-row>
+        </v-col>
 
-    <!-- TRATAMIENTO DE SUPERFICIES -->
-    <v-row class="mb-8">
-      <v-col cols="12">
-        <div class="bloque">
-          <h2 class="section-title">Tratamiento de Superficies</h2>
-          <ul class="custom-list">
-            <li>Pasivado para protección contra la corrosión</li>
-            <li>Pintura especializada según requisitos del proyecto</li>
-            <li>Cincado para aumentar la durabilidad</li>
-          </ul>
-          <div class="galeria">
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Tratamiento de superficies/descarga (2).jpg" alt="Tratamiento 1" loading="lazy" />
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Tratamiento de superficies/descarga (2).jpg" alt="Tratamiento 2" loading="lazy" />
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Tratamiento de superficies/descarga (2).jpg" alt="Tratamiento 3" loading="lazy" />
-          </div>
-        </div>
-      </v-col>
-    </v-row>
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= 'src/assets/imagenes/Grifos/Gr 1/1.2.JPG'
+            alt="Descripción de la imagen 2"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
 
-    <!-- MODULACIÓN -->
-    <v-row class="mb-8">
-      <v-col cols="12">
-        <div class="bloque">
-          <h2 class="section-title">Modulación</h2>
-          <p class="texto-completo">
-            Diseñamos y ejecutamos contenedores, bateas y soluciones modulares adaptadas a las necesidades específicas de cada proyecto.
-          </p>
-          <div class="galeria">
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Modulacion/descarga.jpg" alt="Modulación 1" loading="lazy" />
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Modulacion/descarga.jpg" alt="Modulación 2" loading="lazy" />
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Modulacion/descarga.jpg" alt="Modulación 3" loading="lazy" />
-          </div>
-        </div>
-      </v-col>
-    </v-row>
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= 'src/assets/imagenes/Grifos/Gr 1/1.3.JPG'
+            alt="Descripción de la imagen 3"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 
-    <!-- LOGÍSTICA -->
-    <v-row class="mb-8">
-      <v-col cols="12">
-        <div class="bloque">
-          <h2 class="section-title">Logística</h2>
-          <p class="texto-completo">
-            Contamos con medios propios para el transporte y distribución, y colaboramos con plataformas logísticas para entregas eficientes.
-          </p>
-          <div class="galeria">
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Logistica/descarga (2).jpg" alt="Logística 1" loading="lazy" />
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Logistica/descarga (2).jpg" alt="Logística 2" loading="lazy" />
-            <img src="/src/assets/imagenes/Procesos Auxiliares/Logistica/descarga (2).jpg" alt="Logística 3" loading="lazy" />
-          </div>
-        </div>
-      </v-col>
-    </v-row>
-
-    <!-- Sección contacto -->
-    <section class="consulta-section">
-      <div class="consulta-container">
-        <h3 class="consulta-title mb-4">¿Tienes alguna consulta?</h3>
-        <router-link to="/contacto">
-          <button class="contact-button">Contáctanos</button>
-        </router-link>
-      </div>
-    </section>
-  </v-container>
 </template>
 
 <style scoped>
