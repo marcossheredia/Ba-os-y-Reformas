@@ -5,8 +5,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  color: #333;
-  background-color: #ffffff;
+  color: #0D3642; /* texto principal más oscuro */
+  background-color: #FFFFFF; /* fondo general */
 }
 
 /* Remove default margin from #app */
@@ -27,18 +27,18 @@ body {
 /* Global link styling */
 a {
   text-decoration: none;
-  color: #333;
+  color: #0D3642; /* link normal */
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #F6911D;
+  color: #58B7AE; /* link hover en verde agua */
 }
 
 /* Hero section styling */
 .hero {
   padding: 6rem 0 4rem;
-  background-color: #f5f5f5;
+  background-color: #F5F7F7; /* gris muy suave */
   text-align: center;
 }
 
@@ -48,16 +48,17 @@ section {
 }
 
 .content {
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 
 .clientes {
-  background-color: #f5f5f5;
+  background-color: #F5F7F7;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
+  color: #0D3642; /* títulos en color principal oscuro */
 }
 
 h1 {
@@ -79,10 +80,11 @@ h2:after {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background-color: #F6911D;
+  background-color: #58B7AE; /* detalle decorativo en verde agua */
 }
 
 p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  color: #0D3642;
 }

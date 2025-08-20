@@ -1,24 +1,24 @@
-/* color palette from <https://github.com/vuejs/theme> */
+/* color palette adaptada al branding */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  --vt-c-white: #FFFFFF;
+  --vt-c-white-soft: #F5F7F7;
+  --vt-c-white-mute: #F0F3F3;
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  --vt-c-black: #0D3642; /* tono oscuro del logo */
+  --vt-c-black-soft: #174750; 
+  --vt-c-black-mute: #246368;
 
-  --vt-c-indigo: #2c3e50;
+  --vt-c-primary: #58B7AE; /* verde agua principal */
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --vt-c-divider-light-1: rgba(13, 54, 66, 0.29);
+  --vt-c-divider-light-2: rgba(13, 54, 66, 0.12);
+  --vt-c-divider-dark-1: rgba(88, 183, 174, 0.65);
+  --vt-c-divider-dark-2: rgba(88, 183, 174, 0.48);
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-light-1: var(--vt-c-black);
+  --vt-c-text-light-2: rgba(13, 54, 66, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-text-dark-2: rgba(255, 255, 255, 0.64);
 }
 
 /* semantic color variables for this project */
@@ -33,14 +33,14 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
-  --color-primary: #F6911D;
-  --color-primary-light: rgba(246, 145, 29, 0.1);
+  --color-primary: var(--vt-c-primary);
+  --color-primary-light: rgba(88, 183, 174, 0.1);
   --color-button-gray: #808990;
   
   --section-gap: 160px;
 }
 
-/* Disabled dark mode for consistent styling 
+/* Mantengo el modo oscuro deshabilitado, pero ya adaptado si lo quieres activar */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
@@ -54,7 +54,6 @@
     --color-text: var(--vt-c-text-dark-2);
   }
 }
-*/
 
 *,
 *::before,

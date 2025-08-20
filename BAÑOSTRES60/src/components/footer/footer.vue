@@ -69,18 +69,19 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo verde.png', import.m
 
 <style scoped>
 .bg-custom {
-  background-color: #808990 !important;
+  background-color: #0D3642 !important; /* azul verdoso oscuro */
 }
 
 .footer-link {
-  color: white !important;
+  color: #FFFFFF !important; /* texto en blanco para contraste */
   text-transform: none !important;
   font-size: 0.9rem !important;
   white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  opacity: 0.8;
+  color: #58B7AE !important; /* verde agua en hover */
 }
 
 .footer-wrapper {
@@ -92,13 +93,14 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo verde.png', import.m
   position: relative;
   width: 100%;
   height: 3px;
-  background-color: #F6911D;
+  background-color: #58B7AE; /* línea superior en verde agua */
   margin: 0;
 }
 
 .copyright-text {
-  color: white;
+  color: #FFFFFF;
   font-size: 0.9rem;
+  opacity: 0.85;
 }
 
 @media (max-width: 600px) {
