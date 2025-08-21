@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import slide1 from '../../assets/imagenes/home/foto1.webp'
-import slide2 from '../../assets/imagenes/home/foto2.webp'
+import slide1 from '../../assets/imagenes/usoGeneral/Logo verde.png'
+import slide2 from '../../assets/imagenes/usoGeneral/Logo verde recortado.png'
 
 import foto1b from '../../assets/imagenes/home/foto1b.webp'
 import foto2b from '../../assets/imagenes/home/foto2b.webp'
@@ -10,13 +10,13 @@ import foto3b from '../../assets/imagenes/home/foto3b.webp'
 const slides = ref([
   {
     image: slide1,
-    title: 'Innovación y excelencia marcan la diferencia de nuestro trabajo.',
-    description: 'Somos expertos en las soluciones de soldadura industrial y procesos auxiliares. Nuestra vocación de servicio al cliente es nuestra mayor motivación.'
+    title: 'Aqui puedo poner informacion si quiero.',
+    description: 'Mucha mas informacion que se puede poner aqui si se quiere a a a a a a a a a a a a a.'
   },
   {
     image: slide2,
-    title: 'Innovación y excelencia marcan la diferencia de nuestro trabajo.',
-    description: 'Somos expertos en las soluciones de soldadura industrial y procesos auxiliares. Nuestra vocación de servicio al cliente es nuestra mayor motivación.'
+    title: 'Aqui puedo poner informacion si quiero.',
+    description: 'Mucha mas informacion que se puede poner aqui si se quiere a a a a a a a a a a a a a.'
   }
 ])
 

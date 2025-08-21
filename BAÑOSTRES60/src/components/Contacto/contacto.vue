@@ -105,11 +105,6 @@ const enviarFormulario = async () => {
         <div class="form-grupo">
           <input type="tel" v-model="telefono" placeholder="Teléfono (opcional)">
         </div>
-        <div class="trabajo-button">
-          <button type="button" @click="mostrarCV = !mostrarCV" class="trabajo-toggle">
-            ¿Quieres trabajar con nosotros?
-          </button>
-        </div>
         <div class="form-grupo" v-if="mostrarCV">
           <label for="pdf-upload" class="pdf-label">
             <i class="fas fa-file"></i> &nbsp Adjuntar mi CV (PDF)
