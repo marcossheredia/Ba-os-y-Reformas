@@ -1,8 +1,9 @@
 <script setup>
-
 // Componente Servicios Industriales
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
+// ❌ Quita medium-zoom (no lo necesitamos con v-img)
+// import mediumZoom from 'medium-zoom';
 
 // Inicializamos el router
 const router = useRouter();
@@ -39,18 +40,77 @@ const servicios = ref([
   }
 ]);
 
-// Función para navegar a la página de todos los servicios
+// Navegación
 const irATodosServicios = () => {
   router.push({ path: '/todo-servicios' });
 };
 
+// Contador
+const totalServicios = computed(() => 9);
 
-// Total de servicios disponibles para mostrar como contador
-const totalServicios = computed(() => 9); // Usamos un valor fijo ya que no necesitamos calcular desde todosLosServicios
+// ====== Estado y lógica del visor con zoom ======
+const dialog = ref(false);
+const selectedImage = ref('');
+const scale = ref(1);
+const tx = ref(0);
+const ty = ref(0);
+const panning = ref(false);
+const startX = ref(0);
+const startY = ref(0);
 
-// Mejorar la accesibilidad y SEO al cargar el componente
+const openImage = (src) => {
+  selectedImage.value = src;
+  dialog.value = true;
+  nextTick(() => resetZoom());
+};
+
+const resetZoom = () => {
+  scale.value = 1;
+  tx.value = 0;
+  ty.value = 0;
+  panning.value = false;
+};
+
+const zoomIn = () => { scale.value = Math.min(scale.value + 0.3, 6); };
+const zoomOut = () => { scale.value = Math.max(scale.value - 0.3, 1); };
+
+const onWheel = (e) => {
+  e.preventDefault();
+  const delta = e.deltaY > 0 ? -0.2 : 0.2;
+  scale.value = Math.min(Math.max(scale.value + delta, 1), 6);
+};
+
+const onPointerDown = (e) => {
+  if (scale.value <= 1) return;
+  panning.value = true;
+  startX.value = e.clientX - tx.value;
+  startY.value = e.clientY - ty.value;
+  e.target.setPointerCapture?.(e.pointerId);
+};
+
+const onPointerMove = (e) => {
+  if (!panning.value) return;
+  tx.value = e.clientX - startX.value;
+  ty.value = e.clientY - startY.value;
+};
+
+const onPointerUp = () => { panning.value = false; };
+
+const onDblClick = () => {
+  if (scale.value === 1) {
+    scale.value = 2;
+  } else {
+    resetZoom();
+  }
+};
+
+const imgStyle = computed(() => ({
+  transform: `translate(${tx.value}px, ${ty.value}px) scale(${scale.value})`,
+  cursor: scale.value > 1 ? (panning.value ? 'grabbing' : 'grab') : 'zoom-in'
+}));
+
+// Mejoras accesibilidad / animaciones (lo tuyo)
 onMounted(() => {
-  // Asegurar que las imágenes carguen correctamente
   const images = document.querySelectorAll('.servicios-galeria img');
   images.forEach(img => {
     img.addEventListener('error', function() {
@@ -58,14 +118,12 @@ onMounted(() => {
       this.alt = 'Imagen no disponible - ' + this.alt;
     });
   });
-  
-  // Aplicar animación de aparición a elementos
+
   const elementos = document.querySelectorAll('.animate-on-scroll');
-  elementos.forEach(el => {
-    el.classList.add('appear');
-  });
+  elementos.forEach(el => el.classList.add('appear'));
 });
 </script>
+
 
 //AQUI VAN A IR TODAS LAS FOTOS DE LOS GRIFOS
 <template>
@@ -75,11 +133,13 @@ onMounted(() => {
         <!-- Arriba izquierda: imagen -->
         <v-col cols="12" md="6">
           <v-img
-            src='src/assets/imagenes/Grifos/Gr 1/1.1.JPG'
+            src="src/assets/imagenes/Grifos/Gr 1/1.1.JPG"
             alt="Descripción de la imagen 1"
             height="300"
             contain
-          ></v-img>
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.1.JPG')"
+          />
         </v-col>
 
         <!-- Arriba derecha: texto/información -->
@@ -96,27 +156,58 @@ onMounted(() => {
         <!-- Abajo izquierda: imagen -->
         <v-col cols="12" md="6">
           <v-img
-            src= 'src/assets/imagenes/Grifos/Gr 1/1.2.JPG'
+            src="src/assets/imagenes/Grifos/Gr 1/1.2.JPG"
             alt="Descripción de la imagen 2"
             height="300"
             contain
-          ></v-img>
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.2.JPG')"
+          />
         </v-col>
 
         <!-- Abajo derecha: imagen -->
         <v-col cols="12" md="6">
           <v-img
-            src= 'src/assets/imagenes/Grifos/Gr 1/1.3.JPG'
+            src="src/assets/imagenes/Grifos/Gr 1/1.3.JPG"
             alt="Descripción de la imagen 3"
             height="300"
             contain
-          ></v-img>
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.3.JPG')"
+          />
         </v-col>
       </v-row>
     </v-container>
-  </div>
 
+    <!-- Visor con zoom -->
+    <v-dialog v-model="dialog" max-width="1200px" class="zoom-dialog" persistent>
+      <v-card class="pa-0" rounded="xl">
+        <div class="zoom-toolbar">
+          <v-btn variant="flat" density="comfortable" @click="zoomOut">−</v-btn>
+          <v-btn variant="flat" density="comfortable" @click="resetZoom">Reset</v-btn>
+          <v-btn variant="flat" density="comfortable" @click="zoomIn">+</v-btn>
+          <v-spacer></v-spacer>
+          <v-btn class="boton-cerrar-gris" variant="elevated" @click="dialog=false">Cerrar</v-btn>
+        </div>
+
+        <div
+          class="zoom-wrap"
+          @wheel.prevent="onWheel"
+          @dblclick="onDblClick"
+          @pointerdown="onPointerDown"
+          @pointermove="onPointerMove"
+          @pointerup="onPointerUp"
+          @pointercancel="onPointerUp"
+          @pointerleave="onPointerUp"
+        >
+          <img :src="selectedImage" :style="imgStyle" class="zoom-img" alt="Imagen ampliada" draggable="false" />
+        </div>
+      </v-card>
+    </v-dialog>
+  </div>
 </template>
+
+
 
 
 <style scoped>
@@ -406,6 +497,11 @@ onMounted(() => {
     padding-right: 10px !important;
   }
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 
 @media (max-width: 320px) {
   .section-title {
@@ -706,4 +802,46 @@ onMounted(() => {
     transform: none !important;
   }
 }
+
+.cursor-pointer { cursor: pointer; }
+
+/* Dialog/visor */
+.zoom-dialog .v-card {
+  overflow: hidden;
+  background: transparent !important; /* fondo transparente */
+  box-shadow: none !important;        /* quitar sombra de tarjeta */
+}
+
+.zoom-toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.6));
+  color: white;
+}
+
+.zoom-wrap {
+  width: 100%;
+  height: 80vh;
+  background: transparent; /* transparente en vez de negro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.zoom-img {
+  max-width: 100%;
+  max-height: 100%;
+  user-select: none;
+  will-change: transform;
+  transform-origin: center center;
+}
+.v-overlay__scrim {
+  background: transparent !important;
+}
+
 </style>
