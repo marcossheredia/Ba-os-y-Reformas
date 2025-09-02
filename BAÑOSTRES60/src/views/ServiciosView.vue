@@ -18,6 +18,7 @@ onMounted(() => {
 
 <template>
   <!-- Sección hero con imagen de fondo -->
+  <!--
   <v-parallax
     src="/src/assets/imagenes/Grifos/cabeceraGrifos.jpg"
     height="350"
@@ -32,7 +33,7 @@ onMounted(() => {
     </template>
     <div class="overlay"></div>
   </v-parallax>
-  
+  -->
   <!-- Contenedor principal de la vista de servicios -->
   <v-sheet class="servicios-header py-8" color="#f5f5f5">
     <v-container>

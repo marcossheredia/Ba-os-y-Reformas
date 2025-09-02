@@ -312,7 +312,7 @@ const navbarElevation = computed(() => scrolled.value ? 4 : 1);
 const navbarHeight = computed(() => scrolled.value ? 64 : 80);
 
 // Dynamic image import for the logo with spaces in filename
-const logoPath = ref('/src/assets/imagenes/usoGeneral/logo_SSAB450.png');
+const logoPath = ref('/src/assets/imagenes/usoGeneral/Logo verde recortado.png');
 
 const currentYear = new Date().getFullYear();
 const faviconPath = new URL('@/assets/imagenes/usoGeneral/logo_iconoPagina.png', import.meta.url).href;
@@ -390,7 +390,7 @@ onUnmounted(() => {
           <v-img 
             :src="logoPath" 
             alt="SSAB450 - Especialistas en acero inoxidable" 
-            :width="scrolled ? '160' : '160'" 
+            :width="scrolled ? '100' : '120'" 
             itemprop="logo"
             contain
           />
