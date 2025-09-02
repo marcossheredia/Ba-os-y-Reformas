@@ -198,11 +198,12 @@ function prevSlide() {
   <div class="confian-container">
     <h2 class="confian-title">Nuestros proveedores</h2>
     <div class="confian-logos">
-      <img src="../../assets/imagenes/home/confian/decorban.gif" alt="Logo Decorban" />
+      <img src="../../assets/imagenes/home/confian/gme.jpg" alt="Logo Gme" /> 
       <img src="../../assets/imagenes/home/confian/duplach.jpg" alt="Logo Duplach" />
       <img src="../../assets/imagenes/home/confian/manillons.jpg" alt="Logo Manillons" />
       <img src="../../assets/imagenes/home/confian/royogroup.png" alt="Logo Royo Group" />
-      <img src="../../assets/imagenes/home/confian/gme.jpg" alt="Logo Gme" /> 
+      <img src="../../assets/imagenes/home/confian/decorban.gif" alt="Logo Decorban" />
+      
     </div>
   </div>
 </section>
