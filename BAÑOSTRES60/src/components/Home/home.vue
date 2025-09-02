@@ -93,7 +93,7 @@ function prevSlide() {
     </div>
   </div>
   
-  <section class="conocenos-section">
+<section class="conocenos-section">
   <div class="conocenos-container">
     <div class="imagenes">
       <div class="img-left-top">
@@ -102,20 +102,34 @@ function prevSlide() {
       <div class="img-right">
         <img :src="foto2b" alt="Imagen 2" />
       </div>
-      <div class="img-left-bottom">
+      <div class="img-left-bottom" style="margin-top: -250px;">
         <img :src="foto3b" alt="Imagen 3" />
       </div>
     </div>
     <div class="texto">
-    <!-- CON EL <strong> SE HACEN LOS TEXTOS EN NEGRITA -->
-      <h2>Conócenos</h2>
-      <p>Infoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>Infoaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>Info</p>
-      <p>Info</p>
+      <!-- Título principal con nombre de empresa -->
+      <h1 style="font-size: 2rem; color: #000; margin-bottom: 15px;">
+        Bañostres60
+      </h1>
+
+      <!-- CON EL <strong> SE HACEN LOS TEXTOS EN NEGRITA -->
+      <p><strong>¡Renueva tu baño de manera fácil y rápida!</strong></p>
+      <p>
+        ¿Pensando en cambiar tu bañera por una ducha?  
+        Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>.  
+        Nuestro equipo profesional se adapta a tus necesidades y preferencias.
+      </p>
+      <ul>
+        <li>✔ Instalación rápida y sin complicaciones</li>
+        <li>✔ Materiales de calidad y acabados a tu gusto</li>
+        <li>✔ Mayor comodidad y accesibilidad</li>
+      </ul>
+      <p><strong>Renueva tu baño hoy mismo. ¡Te esperamos!</strong></p>
     </div>
   </div>
 </section>
+
+
 
 <section class="mejor-opcion-section">
   <div class="mejor-opcion-container">
