@@ -131,7 +131,7 @@ const navItems = ref([
     hasSubmenu: true, 
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
-      { name: 'Grifos Lavabo', path: '/servicios', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
+      { name: 'Grifos Lavabo', path: '/grifos1', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
       { name: 'Grifos Ducha', path: '/grifos2', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
       { 
         name: 'Grifos Cocina', 

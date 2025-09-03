@@ -87,6 +87,11 @@ const router = createRouter({
       component: () => import('../components/Maquinaria/NuestrasInstalaciones.vue')
     },
     {
+      path: '/grifos1',
+      name: 'grifos1',
+      component: () => import('../components/Grifos/Grifos1.vue'),
+    },
+    {
       path: '/grifos2',
       name: 'grifos2',
       component: () => import('../components/Grifos/Grifos2.vue'),
