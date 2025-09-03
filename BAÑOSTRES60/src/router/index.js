@@ -95,7 +95,37 @@ const router = createRouter({
       path: '/grifos3',
       name: 'grifos3',
       component: () => import('../components/Grifos/Grifos3.vue'),
-    }    
+    },
+    {
+      path: '/platos1',
+      name: 'platos1',
+      component: () => import('../components/Platos/Platos1.vue'),
+    },
+    {
+      path: '/mamparas1',
+      name: 'mamparas1',
+      component: () => import('../components/Mamparas/Mamparas1.vue'),
+    },
+    {
+      path: '/mamparas2',
+      name: 'mamparas2',
+      component: () => import('../components/Mamparas/Mamparas2.vue'),
+    },
+    {
+      path: '/mamparas3',
+      name: 'mamparas3',
+      component: () => import('../components/Mamparas/Mamparas3.vue'),
+    },
+    {
+      path: '/mamparas4',
+      name: 'mamparas4',
+      component: () => import('../components/Mamparas/Mamparas4.vue'),
+    },
+    {
+      path: '/mamparas5',
+      name: 'mamparas5',
+      component: () => import('../components/Mamparas/Mamparas5.vue'),
+    }        
   ],
 })
 

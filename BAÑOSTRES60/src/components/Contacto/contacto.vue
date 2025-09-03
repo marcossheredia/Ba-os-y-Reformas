@@ -69,20 +69,21 @@ const enviarFormulario = async () => {
         <div class="dato">
           <div>
             <h3><b>Dirección</b> <i class="fa-solid fa-map" style="color: black; font-size: large;"></i></h3>
-            <p>C. Manolo, 666</p>
+            <p>C. Diego de Torres, 5</p>
             <p>28805 Alcala de Henares, Madrid</p>
           </div>
         </div>
         <div class="dato">
           <div>
             <h3><b>Horario</b> <i class="fa-solid fa-clock" style="color: black; font-size: large;"></i></h3>
-            <p>Lunes a Viernes: cuando me salga de los cojones. </p>
+            <p>Lunes a Viernes:  </p>
+            <p>9:00 - 14:00 | 16:00 - 19:00. </p>
           </div>
         </div>
         <div class="dato">
           <div>
             <h3><b>Teléfono</b> <i class="fa-solid fa-user" style="color: black; font-size: large;"></i></h3>
-            <p><a href="tel:+34913005422">+34 661 80 59 52</a></p>
+            <p><a href="tel:+34912950536">+34 912 95 05 36</a></p>
           </div>
         </div>
         <div class="dato">
@@ -131,7 +132,7 @@ const enviarFormulario = async () => {
 
     <div class="mapa">
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3261342271387!2d-3.8497377!3d40.125439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41e1f7b87bc6cf%3A0x89df524f8345d6e3!2sC.%20Tejo%2C%2012%2C%2045200%20Illescas%2C%20Toledo!5e0!3m2!1ses!2ses!4v1699999999999!5m2!1ses!2ses"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6249220943014!2d-3.3706795250006976!3d40.48356217142898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424912b7372f4b%3A0x71d49bab96654b45!2sCalle%20Diego%20de%20Torres%2C%205%2C%2028802%20Alcal%C3%A1%20de%20Henares%2C%20Madrid!5e0!3m2!1ses!2ses!4v1756914418984!5m2!1ses!2ses" 
         width="100%" 
         height="450" 
         style="border:0;" 

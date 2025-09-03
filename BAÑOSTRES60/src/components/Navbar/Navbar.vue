@@ -124,17 +124,17 @@ const navItems = ref([
   },
   { 
     name: 'GRIFOS' , 
-    path: '/servicios',    // determinar path
+    path: '/',    // determinar path
     title: 'Nuestros servicios profesionales acerca de grifos',  // esto es para cuando dejas en raton sobre el boton la info que sale
     ariaLabel: 'Servicios', 
     keywords: 'servicios industriales, acero inoxidable, soldadura, soluciones',
     hasSubmenu: true, 
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
-      { name: 'Grifos 1.1', path: '/servicios', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
-      { name: 'Grifos 1.2', path: '/grifos2', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
+      { name: 'Grifos Lavabo', path: '/servicios', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
+      { name: 'Grifos Ducha', path: '/grifos2', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
       { 
-        name: 'Grifos 1.3', 
+        name: 'Grifos Cocina', 
         path: '/grifos3', 
         title: 'Diferentes técnicas de soldadura industrial que ofrecemos', 
         ariaLabel: 'Tipos de soldadura',
@@ -145,7 +145,7 @@ const navItems = ref([
   },
   { 
     name: 'PLATOS', 
-    path: '/laboratorio', 
+    path: '/platos1', 
     title: 'Nuestro laboratorio de análisis y control de calidad', 
     ariaLabel: 'Laboratorio', 
     keywords: 'laboratorio, análisis, control calidad, pruebas',
@@ -153,11 +153,11 @@ const navItems = ref([
   },
   { 
     name: 'ESPEJOS', 
-    path: '', 
+    path: '/espejos1', 
     title: 'Nuestra maquinaria industrial especializada', 
     ariaLabel: 'Maquinaria', 
     keywords: 'maquinaria industrial, equipos, tecnología',
-    hasSubmenu: true, 
+    hasSubmenu: false, 
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Servicio 3.1', path: '/maquinaria/instalaciones', title: 'Instalaciones y equipamiento técnico', ariaLabel: 'Nuestras instalaciones' },
@@ -174,11 +174,12 @@ const navItems = ref([
     hasSubmenu: true,
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
-      { name: 'Servicio 4.1', path: '/procesos-auxiliares#transformacion', title: 'Servicios de transformación metalúrgica', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
-      /*{ name: 'Servicio 4.2', path: '/procesos-auxiliares#tratamiento', title: 'Tratamientos de superficies metálicas', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
-      { name: 'Servicio 4.3', path: '/procesos-auxiliares#modulacion', title: 'Servicios de modulación industrial', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
-      { name: 'Servicio 4.4', path: '/procesos-auxiliares#logistica', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' }
-    */
+      { name: 'Mamparas Correderas', path: '/mamparas1', title: 'Servicios de transformación metalúrgica', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
+      { name: 'Mamparas de Aluminio ', path: '/mamparas2', title: 'Tratamientos de superficies metálicas', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
+      { name: 'Mamparas Abatibles', path: '/mamparas3', title: 'Servicios de modulación industrial', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
+      { name: 'Mamparas Plegables', path: '/mamparas4', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' },
+      { name: 'Otras soluciones', path: '/mamparas5', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' }
+    
     ]
     //*/
   },
