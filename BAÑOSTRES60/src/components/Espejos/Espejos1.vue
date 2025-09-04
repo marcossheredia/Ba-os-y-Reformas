@@ -17,48 +17,126 @@ onMounted(() => {
 </script>
 
 <template>
-  <!-- Sección hero con imagen de fondo -->
-  <!--
-  <v-parallax
-    src="/src/assets/imagenes/Grifos/cabeceraGrifos.jpg"
-    height="350"
-    alt="Soldadura MIG MAG robotizada de alta precisión en instalaciones industriales"
-    class="hero-image-section"
-    contain
-  >
-    <template v-slot:placeholder>
-      <v-row class="fill-height ma-0" align="center" justify="center">
-        <v-progress-circular indeterminate color="#F6911D"></v-progress-circular>
-      </v-row>
-    </template>
-    <div class="overlay"></div>
-  </v-parallax>
-  -->
+
   <!-- Contenedor principal de la vista de servicios -->
   <v-sheet class="servicios-header py-8" color="#f5f5f5">
     <v-container>
       <v-row justify="center">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">ESPEJOS</h1>
+          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS LAVABO</h1>
         </v-col>
         <v-col cols="12" md="10" lg="8">
           <p class="servicios-intro text-body-1">
-            ADIOS <strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos
+            Grifos <strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos
           </p>
         </v-col>
       </v-row>
     </v-container>
   </v-sheet>
   
-  <!-- Componente de servicios industriales (con galería) -->
-  <v-container>
-    <ServiciosIndustriales />
-  </v-container>
-  
-  <!-- Componente de servicios ofrecidos -->
-  <v-container class="pb-10">
-    <ServOfrecidos />
-  </v-container>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src="src/assets/imagenes/Grifos/Gr 1/1.1.JPG"
+            alt="Descripción de la imagen 1"
+            height="300"
+            contain
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.1.JPG')"
+          />
+        </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
+          </div>
+        </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src="src/assets/imagenes/Grifos/Gr 1/1.2.JPG"
+            alt="Descripción de la imagen 2"
+            height="300"
+            contain
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.2.JPG')"
+          />
+        </v-col>
+
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src="src/assets/imagenes/Grifos/Gr 1/1.3.JPG"
+            alt="Descripción de la imagen 3"
+            height="300"
+            contain
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.3.JPG')"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+
+      
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src="src/assets/imagenes/Grifos/Gr 1/1.1.JPG"
+            alt="Descripción de la imagen 1"
+            height="300"
+            contain
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.1.JPG')"
+          />
+        </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
+          </div>
+        </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src="src/assets/imagenes/Grifos/Gr 1/1.2.JPG"
+            alt="Descripción de la imagen 2"
+            height="300"
+            contain
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.2.JPG')"
+          />
+        </v-col>
+
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src="src/assets/imagenes/Grifos/Gr 1/1.3.JPG"
+            alt="Descripción de la imagen 3"
+            height="300"
+            contain
+            class="cursor-pointer"
+            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.3.JPG')"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+    
 </template>
 
 <style scoped>

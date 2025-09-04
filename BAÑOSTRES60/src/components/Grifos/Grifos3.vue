@@ -1,45 +1,46 @@
 <script setup>
-import ServOfrecidos from '@/components/Servicios/ServOfrecidos.vue';
-import ServiciosIndustriales from '@/components/Servicios/ServiciosIndustriales.vue';
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
+
+// 👇 Aquí importas tus imágenes, solo cambia la ruta a la que quieras
+import img1 from '@/assets/imagenes/Grifos_cocina/1.1.PNG'
+import img2 from '@/assets/imagenes/Grifos_cocina/1.2.PNG'
+import img3 from '@/assets/imagenes/Grifos_cocina/1.3.PNG'
+import img4 from '@/assets/imagenes/Grifos_cocina/1.4.PNG'
+import img5 from '@/assets/imagenes/Grifos_cocina/1.5.PNG'
+import img6 from '@/assets/imagenes/Grifos_cocina/1.6.PNG'
+import img7 from '@/assets/imagenes/Grifos_cocina/2.1.PNG'
+import img8 from '@/assets/imagenes/Grifos_cocina/2.2.PNG'
+import img9 from '@/assets/imagenes/Grifos_cocina/2.3.PNG'
+import img10 from '@/assets/imagenes/Grifos_cocina/2.4.PNG'
+
+const dialog = ref(false)
+const selectedImage = ref(null)
+
+function openImage(img) {
+  selectedImage.value = img
+  dialog.value = true
+}
 
 // Optimizar para SEO
 onMounted(() => {
-  // Actualizar el título de la página
   document.title = 'Servicios Industriales | Soldadura y Acero Inoxidable | SSAB450';
-  
-  // Agregar meta descripción para SEO
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
-    metaDescription.setAttribute('content', 'Servicio profesional de soldadura industrial, soldadura MIG MAG robotizada, acero inoxidable, brazing y tratamiento de metales. Tecnología puntera y optimización de procesos industriales.');
+    metaDescription.setAttribute(
+      'content',
+      'Servicio profesional de soldadura industrial, soldadura MIG MAG robotizada, acero inoxidable, brazing y tratamiento de metales. Tecnología puntera y optimización de procesos industriales.'
+    );
   }
 });
 </script>
 
+
 <template>
-  <!-- Sección hero con imagen de fondo -->
-  <!--
-  <v-parallax
-    src="/src/assets/imagenes/Grifos/cabeceraGrifos.jpg"
-    height="350"
-    alt="Soldadura MIG MAG robotizada de alta precisión en instalaciones industriales"
-    class="hero-image-section"
-    contain
-  >
-    <template v-slot:placeholder>
-      <v-row class="fill-height ma-0" align="center" justify="center">
-        <v-progress-circular indeterminate color="#F6911D"></v-progress-circular>
-      </v-row>
-    </template>
-    <div class="overlay"></div>
-  </v-parallax>
-  -->
-  <!-- Contenedor principal de la vista de servicios -->
   <v-sheet class="servicios-header py-8" color="#f5f5f5">
     <v-container>
       <v-row justify="center">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS DE COCINA</h1>
+          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS LAVABO</h1>
         </v-col>
         <v-col cols="12" md="10" lg="8">
           <p class="servicios-intro text-body-1">
@@ -49,17 +50,262 @@ onMounted(() => {
       </v-row>
     </v-container>
   </v-sheet>
-  
-  <!-- Componente de servicios industriales (con galería) -->
-  <v-container>
-    <ServiciosIndustriales />
+
+  <!-- Primer bloque -->
+  <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img1"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img1)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO 1.1.1 MODELO XZY</h2>
+          <p>
+            Grifo que suelta agua de mi casa.  
+            Funciona de forma muy correcta levantas y sale agua.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
   </v-container>
-  
-  <!-- Componente de servicios ofrecidos -->
-  <v-container class="pb-10">
-    <ServOfrecidos />
+
+  <!-- Segundo bloque -->
+  <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img2"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
   </v-container>
+
+    <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img3"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img4"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img5"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img6"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img7"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img8"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img9"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+      <v-container class="py-8">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img10"
+          alt="Descripción de la imagen 2"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+        <div class="pa-4 text-center">
+          <h2>GRIFO MODELO ABC</h2>
+          <p>
+            Otro grifo con características diferentes.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+  <v-dialog v-model="dialog" max-width="800px" persistent>
+    <v-card>
+      <v-img :src="selectedImage" height="500" contain />
+      <v-card-actions>
+        <v-spacer />
+        <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
+
 </template>
+
 
 <style scoped>
 .hero-image-section {
