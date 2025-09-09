@@ -130,7 +130,12 @@ const router = createRouter({
       path: '/mamparas5',
       name: 'mamparas5',
       component: () => import('../components/Mamparas/Mamparas5.vue'),
-    }        
+    },
+    {
+      path: '/espejos',
+      name: 'espejos',
+      component: () => import('../components/Espejos/Espejos1.vue'),
+    }         
   ],
 })
 

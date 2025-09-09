@@ -153,7 +153,7 @@ const navItems = ref([
   },
   { 
     name: 'ESPEJOS', 
-    path: '/espejos1', 
+    path: '/espejos', 
     title: 'Nuestra maquinaria industrial especializada', 
     ariaLabel: 'Maquinaria', 
     keywords: 'maquinaria industrial, equipos, tecnología',
