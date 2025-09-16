@@ -113,12 +113,10 @@ onMounted(() => {
     <v-container>
       <v-row justify="center">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS LAVABO</h1>
+          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">ESPEJOS</h1>
         </v-col>
         <v-col cols="12" md="10" lg="8">
-          <p class="servicios-intro text-body-1">
-            Grifos <strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos
-          </p>
+          
         </v-col>
       </v-row>
     </v-container>
@@ -140,10 +138,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO BASIC</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Colección Basic, cristal de canto pulido recto
+            con 4 mm de espesor.  
           </p>
         </div>
       </v-col>
@@ -178,10 +176,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO RETRO</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor. Luz
+            retroiluminada de 5500 oK. Bastidor de PVC con
+            sistema de fijación regulable y nivelable.
           </p>
         </div>
       </v-col>
@@ -216,10 +215,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO EXTEND H/V </h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor y
+            arenado de 48 mm. Luz frontal de 5500 oK
+            y sistema de fijación extensible.
           </p>
         </div>
       </v-col>
@@ -254,10 +254,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO CLASSIC</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor y are-
+            nado de 33 mm. Luz frontal de 5500 oK. Bastidor de
+            PVC con sistema de fijación regulable y nivelable.
           </p>
         </div>
       </v-col>
@@ -292,10 +293,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO BRIA</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor y arenado de 
+            33 mm. Luz frontal y retroiluminada de 5500 oK. Bastidor
+            de PVC con sistema de fijación regulable y nivelable.
           </p>
         </div>
       </v-col>
@@ -330,10 +332,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO WHITE</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor y arenado
+            de 30 mm. Luz retroiluminada de 5500 oK. Bastidor
+            de PVC con sistema de fijación regulable y nivelable.
           </p>
         </div>
       </v-col>
@@ -368,10 +371,12 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO NOVA</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor y arenado de 30 mm.
+            Luz frontal de 5500 oK. Con marco exterior de aluminio
+            y bastidor de PVC con sistema de fijación regulable y
+            nivelable.
           </p>
         </div>
       </v-col>
@@ -406,10 +411,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO CLIO</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor. Luz frontal y
+            retroiluminada de 5500 oK. Bastidor de PVC y siste-
+            ma de fijación regulable y nivelable
           </p>
         </div>
       </v-col>
@@ -444,10 +450,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO STRIPE</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor y arenado
+            de 35 mm. Luz frontal de 5500 oK. Bastidor de PVC
+            con sistema de fijación regulable y nivelable.
           </p>
         </div>
       </v-col>
@@ -482,10 +489,12 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO LINE</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor y arenado de
+            35 mm. Luz frontal de 5500 oK. Bastidor de PVC con
+            sistema de fijación regulable y nivelable y marco
+            exterior de aluminio.
           </p>
         </div>
       </v-col>
@@ -520,10 +529,12 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO MARCUS</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor y
+            arenado de 35 mm. Luz frontal y perimetral de
+            5500 oK. Bastidor de PVC con sistema de fijación
+            regulable y nivelable.
           </p>
         </div>
       </v-col>
@@ -558,10 +569,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO LEXUS</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal de canto recto con 4 mm de espesor. Luz frontal de
+            5500 oK. Bastidor de PVC con sistema de fijación
+            regulable y nivelable.
           </p>
         </div>
       </v-col>
@@ -596,10 +608,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO ALVERO</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal circular de 4 mm de espesor. 
+            Fijación mediante pletinas metálicas.
           </p>
         </div>
       </v-col>
@@ -634,10 +646,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO ALBA</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal circular de 4 mm de espesor. 
+            Marco exterior de aluminio.
           </p>
         </div>
       </v-col>
@@ -672,10 +684,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO BRUMA</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal circular de 4 mm de espesor. Luz retroiluminada de
+            5500 oK. Bastidor de goma EVA.
           </p>
         </div>
       </v-col>
@@ -710,10 +722,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO MOON</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal circular de 4 mm de espesor y arenado de 30 mm. Luz
+            retroiluminada de 5500 oK. Bastidor de goma EVA.
           </p>
         </div>
       </v-col>
@@ -748,10 +760,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO SUN</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal circular de 4 mm de espesor y arenado de 35 mm con film anti–
+            explosión. Luz frontal regulable de 3000 oK a 6500 oK.
+            Marco exterior de aluminio. Protección IP65.
           </p>
         </div>
       </v-col>
@@ -786,10 +799,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO REDONDO</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal circular de 4 mm de espesor y arenado de
+            35 mm. Con luz frontal de 5500 oK, sensor on/off
+            antivaho y bastidor de PVC.
           </p>
         </div>
       </v-col>
@@ -824,10 +838,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO ARENA</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal circular de 4 mm de espesor y arenado de 35 mm.
+            Luz frontal y retroiluminada de 5500 oK. Bastidor de
+            goma EVA.
           </p>
         </div>
       </v-col>
@@ -862,10 +877,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO HULA</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Espejo circular con 4 mm de espesor con film antiexplosión.
+            Encendido de luz progresiva de 5500 oK. Posiciones
+            de instalación: izquierda o derecha.
           </p>
         </div>
       </v-col>
@@ -900,10 +916,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO LUK</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal cápsula de 4 mm de espesor. 
+            Fijación mediante pletinas metálicas.
           </p>
         </div>
       </v-col>
@@ -938,10 +954,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO AURA</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal cápsula de 4 mm de espesor. 
+            Luz retroiluminada de 5500 oK. Bastidor de goma EVA.
           </p>
         </div>
       </v-col>
@@ -976,10 +992,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO CALAS</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal cápsula de 4 mm de espesor y arenado de 30 mm. Luz
+            retroiluminada de 5500 oK. Bastidor de goma EVA.
           </p>
         </div>
       </v-col>
@@ -1014,10 +1030,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO CALAS VESTIDOR</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal cápsula de 4 mm de espesor y arenado de
+            30 mm. Luz retroiluminada de 5500 oK. Bastidor de
+            goma EVA.
           </p>
         </div>
       </v-col>
@@ -1052,10 +1069,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO EROS</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal cápsula de 4 mm de espesor y arenado de 25 mm. Luz frontal y
+            retroiluminada de 5500 oK. Bastidor de goma EVA.
           </p>
         </div>
       </v-col>
@@ -1090,10 +1107,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO DANTE</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal cápsula de 4 mm de espesor y arenado de 30 mm
+            con film antiexplosión. Luz frontal regulable de 3000
+            a 6500 oK. Marco exterior de aluminio.
           </p>
         </div>
       </v-col>
@@ -1128,10 +1146,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO OVAL</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Espejo ovalado de 4 mm de espesor y arenado de 35 mm.
+            Luz frontal de 5500 oK y bastidor de PVC.
           </p>
         </div>
       </v-col>
@@ -1166,10 +1184,11 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
+          <h2>ESPEJO CIRCUS</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cristal cápsula de 4 mm de espesor. Luz frontal de
+            5500 oK y bastidor de PVC con sistema de fijación
+            regulable y nivelable.
           </p>
         </div>
       </v-col>
@@ -1178,44 +1197,6 @@ onMounted(() => {
       <v-col cols="12" class="d-flex justify-center">
         <v-img
           :src="img56"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img57"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO 1.1.1 MODELO XZY</h2>
-          <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img58"
           alt="Descripción de la imagen 2"
           height="250"
           contain
