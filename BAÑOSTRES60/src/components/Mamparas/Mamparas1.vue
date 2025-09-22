@@ -1141,91 +1141,104 @@ onMounted(() => {
   </v-dialog>
 </template>
 
-
 <style scoped>
-.hero-image-section {
+:host{
+  --primary: #00bcd4;        /* cian corporativo */
+  --primary-dark:#0097a7;
+  --text:#0b3340;
+  --muted:#23424a;
+  --bg:#f6f8f8;
+}
+
+/* Header / título */
+.servicios-header{
+  background: linear-gradient(180deg,#eef8fa, #ffffff);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+h1{
   position: relative;
-  background-color: #333; /* Color fallback si la imagen no carga */
+  color: var(--text);
+  letter-spacing:.5px;
+}
+h1::after{
+  content:'';
+  position:absolute;
+  bottom:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:4px;
+  border-radius:2px;
+  background: var(--primary);
 }
 
-/* Overlay para mejorar contraste si se añade texto después */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Bloques y tipografía */
+.v-container.py-8{ padding-top:clamp(24px,4vw,56px) !important; padding-bottom:clamp(24px,4vw,56px) !important; }
+.pa-4.text-center h2{
+  color: var(--text);
+  font-weight:700;
+  margin-bottom:.25rem;
+}
+.pa-4.text-center p{
+  color: var(--muted);
+  margin:0;
+  line-height:1.6;
+}
+
+/* Imágenes */
+.v-col :deep(.v-img){
+  border-radius:14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+  background:#fff;
+}
+.v-col :deep(.v-img:hover){
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,.12);
+}
+.cursor-pointer{ cursor:pointer; }
+
+/* Fila con imagen centrada (las segundas filas de cada bloque) */
+.d-flex.justify-center :deep(.v-img){
+  max-width: min(920px, 100%);
   width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
-  z-index: 1;
+  border-radius: 14px;
 }
 
-.servicios-intro {
-  line-height: 1.8;
-  color: #555;
-  margin: 1.5rem auto 0;
-  text-align: center;
+/* Diálogo de imagen */
+:deep(.v-dialog .v-card){
+  border-radius:16px;
+  box-shadow: 0 18px 48px rgba(0,0,0,.25);
+}
+:deep(.v-dialog .v-img){
+  background:#000; /* mejor percepción de bordes en imágenes PNG */
+}
+:deep(.v-dialog .v-card-actions){
+  padding: 8px 16px;
+  border-top: 1px solid rgba(0,0,0,.06);
 }
 
-/* Línea decorativa bajo el título */
-h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background-color: #F6911D;
+/* Botón “Cerrar” (color primario cian) */
+:deep(.v-btn.v-btn--variant-flat){
+  background: var(--primary) !important;
+  color:#fff !important;
+}
+:deep(.v-btn.v-btn--variant-flat:hover){
+  background: var(--primary-dark) !important;
 }
 
-/* Soporte para impresión */
-@media print {
-  .hero-image-section {
-    display: none;
-  }
+/* Separadores entre bloques (opcional, sutil) */
+.v-container + .v-container{
+  border-top:1px solid rgba(0,0,0,.05);
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  .pa-4.text-center{ padding: 8px !important; }
+}
+@media (max-width: 600px){
+  h1::after{ width:90px; }
+  .pa-4.text-center h2{ font-size:1.1rem; }
 }
 </style>
 
-<style scoped>
-.hero-image-section {
-  position: relative;
-  background-color: #333; /* Color fallback si la imagen no carga */
-}
-
-/* Overlay para mejorar contraste si se añade texto después */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
-  z-index: 1;
-}
-
-.servicios-intro {
-  line-height: 1.8;
-  color: #555;
-  margin: 1.5rem auto 0;
-}
-
-/* Línea decorativa bajo el título */
-h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background-color: #F6911D;
-}
-
-/* Soporte para impresión */
-@media print {
-  .hero-image-section {
-    display: none;
-  }
-}
-
-</style>

@@ -147,38 +147,100 @@ onMounted(() => {
 </template>
 
 <style scoped>
+/* ===========================
+   Aviso Legal – Estilos
+   Usa variables globales si existen; si no, fallbacks
+   =========================== */
 .aviso-legal-container {
+  --primary: var(--color-primary, #00bcd4);
+  --primary-dark: var(--color-primary-dark, #0097a7);
+  --text: var(--color-text, #333333);
+  --muted: var(--color-text-light, #616b74);
+  --surface: var(--color-surface, #ffffff);
+  --bg: var(--color-bg, #f7fafb);
+
   max-width: 900px;
   margin: 0 auto;
-  color: #333;
-  line-height: 1.7;
+  color: var(--text);
+  line-height: 1.75;
   padding: 2rem 1rem;
+  background: var(--surface);
 }
+
 .aviso-legal-container h1 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-size: clamp(1.8rem, 2.4vw, 2.3rem);
+  font-weight: 800;
+  color: var(--primary-dark);
+  letter-spacing: 0.2px;
+  position: relative;
 }
+
+/* Subrayado decorativo en el H1 con color de marca */
+.aviso-legal-container h1::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--primary);
+  margin: 10px auto 0;
+}
+
 .aviso-legal-container h2 {
   margin-top: 2rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #d62828;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  letter-spacing: .2px;
 }
-.legal-link {
-  color: #d62828;
-  font-weight: 500;
-  text-decoration: none;
+
+.aviso-legal-container p,
+.aviso-legal-container li {
+  color: var(--muted);
 }
-.legal-link:hover {
-  text-decoration: underline;
-}
+
+/* Listas */
 ul {
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
   margin-bottom: 1rem;
+  padding-left: .25rem;
 }
+
+/* Separación entre secciones */
 section {
   margin-bottom: 1.5rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px dashed rgba(0,0,0,.06);
+}
+
+/* Enlaces legales: color marca + estados accesibles */
+.legal-link {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,188,212,.3);
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.legal-link:hover {
+  color: var(--primary);
+  border-color: rgba(0,188,212,.6);
+  text-decoration: none;
+}
+.legal-link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .aviso-legal-container {
+    padding: 1.25rem .75rem;
+  }
+  ul {
+    margin-left: 1rem;
+  }
 }
 </style>

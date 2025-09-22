@@ -690,91 +690,121 @@ onMounted(() => {
   </v-dialog>
 </template>
 
-
 <style scoped>
-.hero-image-section {
+/* ===========================
+   Grifos Ducha – Estilos
+   Paleta cian con fallbacks
+   =========================== */
+:host, .servicios-header {
+  --primary: var(--color-primary, #00bcd4);
+  --primary-dark: var(--color-primary-dark, #0097a7);
+  --primary-light: var(--color-primary-light, #b2ebf2);
+  --text: var(--color-text, #1f2a33);
+  --muted: var(--color-text-light, #606c78);
+  --surface: var(--color-surface, #ffffff);
+  --bg: var(--color-bg, #f7fafb);
+}
+
+/* Cabecera con título */
+.servicios-header {
+  background: linear-gradient(180deg, rgba(0,188,212,.10), rgba(0,188,212,0));
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  padding-block: clamp(24px, 5vw, 48px) !important;
+}
+
+.servicios-header h1 {
   position: relative;
-  background-color: #333; /* Color fallback si la imagen no carga */
+  color: var(--primary-dark);
+  letter-spacing: .4px;
+  text-transform: uppercase;
 }
 
-/* Overlay para mejorar contraste si se añade texto después */
-.overlay {
+/* Subrayado decorativo cian */
+.servicios-header h1::after {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
-  z-index: 1;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--primary);
 }
 
+/* Intro bajo el título */
 .servicios-intro {
   line-height: 1.8;
-  color: #555;
-  margin: 1.5rem auto 0;
+  color: var(--muted);
+  margin: 1.2rem auto 0;
   text-align: center;
 }
 
-/* Línea decorativa bajo el título */
-h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background-color: #F6911D;
+/* Espaciado por bloque */
+.py-8 {
+  padding-block: clamp(24px, 6vw, 56px) !important;
 }
 
-/* Soporte para impresión */
+/* Tarjetita de texto al lado de la imagen */
+.pa-4.text-center {
+  background: var(--surface);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  padding: clamp(14px, 2vw, 22px) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}
+.pa-4.text-center h2 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.pa-4.text-center p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Imágenes (Vuetify v-img) */
+.cursor-pointer { cursor: pointer; }
+
+:deep(.v-img) {
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+:deep(.v-img:hover) {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(0,0,0,.10);
+}
+
+/* Separadores sutiles entre contenedores */
+.v-container + .v-container {
+  border-top: 1px dashed rgba(0,0,0,.06);
+}
+
+/* Diálogo (ampliar imagen) y botón primario con color de marca */
+:deep(.v-dialog .v-card) {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+}
+:deep(.v-dialog .v-card-actions) {
+  border-top: 1px solid rgba(0,0,0,.06);
+  padding: 12px 16px;
+}
+:deep(.v-btn[color="primary"]) {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+:deep(.v-btn[color="primary"]:hover) {
+  background: var(--primary-dark) !important;
+}
+
+/* Impresión: oculta cabecera/diálogo */
 @media print {
-  .hero-image-section {
-    display: none;
-  }
+  .servicios-header { display: none; }
+  :deep(.v-dialog) { display: none !important; }
 }
-</style>
-
-<style scoped>
-.hero-image-section {
-  position: relative;
-  background-color: #333; /* Color fallback si la imagen no carga */
-}
-
-/* Overlay para mejorar contraste si se añade texto después */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
-  z-index: 1;
-}
-
-.servicios-intro {
-  line-height: 1.8;
-  color: #555;
-  margin: 1.5rem auto 0;
-}
-
-/* Línea decorativa bajo el título */
-h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background-color: #F6911D;
-}
-
-/* Soporte para impresión */
-@media print {
-  .hero-image-section {
-    display: none;
-  }
-}
-
 </style>

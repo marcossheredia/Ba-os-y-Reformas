@@ -72,92 +72,99 @@ import vistaTaller from '@/assets/imagenes/sobreNosotros/bañoG3.jpg'
 </template>
 
 <style scoped>
-.title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.7rem;
-  font-weight: bold;
+:host{
+  --accent:#F6911D;      /* naranja corporativo */
+  --ink:#23424a;         /* texto */
+  --bg-light:#f9f9f9;    /* fondo bloques */
 }
 
-.subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  text-align: justify;
+/* ====== TÍTULO ====== */
+.title{
+  font-family:'Poppins',sans-serif;
+  font-size:2.7rem;
+  font-weight:700;
+  color:#0D3642;
+  margin-bottom:.5rem;
+}
+.divider-naranja{
+  border-color:var(--accent) !important;
+  opacity:1;
+  border-radius:2px;
 }
 
-.contenedor-centrado {
-  max-width: 1800px;
-  margin: 0 auto;
+/* ====== TEXTO ====== */
+.subtitle{
+  font-family:'Poppins',sans-serif;
+  font-size:1.1rem;
+  line-height:1.7;
+  color:var(--ink);
+  text-align:justify;
+  background:var(--bg-light);
+  padding:1.5rem;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+  height:100%;
 }
 
-.divider-naranja {
-  border-color: #F6911D !important;
-  opacity: 1;
+/* ====== IMÁGENES ====== */
+.image{
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  object-fit:cover;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.image:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 32px rgba(0,0,0,.18);
 }
 
-.image {
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  max-width: 100%;
-  object-fit: cover;
+/* ====== CONTENEDOR CENTRAL ====== */
+.contenedor-centrado{
+  max-width:1800px;
+  margin:0 auto;
 }
 
-.consulta-section {
-  padding: 3rem 1rem;
-  text-align: center;
-  border-radius: 8px;
+/* ====== SECCIÓN CONTACTO ====== */
+.consulta-section{
+  padding:3rem 1rem;
+  text-align:center;
+}
+.consulta-title{
+  font-family:'Poppins',sans-serif;
+  font-size:1.4rem;
+  font-weight:600;
+  color:#0D3642;
+  margin-bottom:1rem;
+}
+.contact-button{
+  font-size:1rem;
+  font-family:'Segoe UI',Calibri,sans-serif;
+  background-color:#808990;
+  color:#fff;
+  padding:.6rem 2rem;
+  border:2px solid var(--accent);
+  border-radius:25px;
+  font-weight:700;
+  cursor:pointer;
+  transition:all .3s ease;
+}
+.contact-button:hover{
+  background-color:#6b7379;
+  transform:scale(1.04);
 }
 
-.consulta-container {
-  margin: 0 auto;
-}
-
-.consulta-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.contact-button {
-  font-size: 1rem;
-  background-color: #808990;
-  color: #fff;
-  padding: 0.6rem 2rem;
-  border: 2px solid #f6911d;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Segoe UI', Calibri, sans-serif;
-}
-
-.contact-button:hover {
-  background-color: #6b7379;
-  transform: scale(1.03);
-}
-
-@media (max-width: 768px) {
-  .image {
-    height: 250px !important;
-    width: 90% !important;
-    margin: 0 auto;
+/* ====== RESPONSIVE ====== */
+@media(max-width:768px){
+  .title{ font-size:2rem; }
+  .subtitle{
+    text-align:center !important;
+    padding:1rem;
   }
-
-  .subtitle {
-    text-align: center !important;
-    padding: 0 0rem;
+  .image{
+    height:240px !important;
+    width:92% !important;
+    margin:0 auto;
   }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .last-section {
-    margin-bottom: 0rem !important;
-  }
-
-  .consulta-section {
-    padding-bottom: 3rem;
-  }
+  .last-section{ margin-bottom:0 !important; }
 }
 </style>

@@ -36,15 +36,19 @@ const acceptCookies = () => {
 
 <style scoped>
 .cookie-banner {
+  --primary: var(--color-primary, #00bcd4);
+  --primary-dark: var(--color-primary-dark, #0097a7);
+
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   background-color: #1e1e1e;
-  color: white;
+  color: #f1f1f1;
   z-index: 9999;
   padding: 1rem 1.5rem;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.35);
+  font-family: 'Poppins', sans-serif;
 }
 
 .cookie-container {
@@ -59,29 +63,39 @@ const acceptCookies = () => {
 
 .cookie-text {
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .cookie-text a {
-  color: #f6911d;
+  color: var(--primary);
   text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.cookie-text a:hover {
+  color: var(--primary-dark);
 }
 
 .cookie-button {
-  background-color: #f6911d;
-  color: white;
-  font-weight: bold;
+  background-color: var(--primary-dark);
+  color: #fff;
+  font-weight: 600;
   border: none;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  padding: 0.6rem 1.4rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
 
 .cookie-button:hover {
-  background-color: #d67600;
+  background-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* Animación de entrada/salida */
 .slide-up-enter-active,
 .slide-up-leave-active {
   transition: all 0.4s ease;
@@ -90,5 +104,13 @@ const acceptCookies = () => {
 .slide-up-leave-to {
   transform: translateY(100%);
   opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .cookie-container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>

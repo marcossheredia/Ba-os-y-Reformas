@@ -161,15 +161,23 @@ const enviarFormulario = async () => {
     </div>
   </div>
 </template>
-
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .contacto-container {
+  --primary: var(--color-primary, #00bcd4);
+  --primary-dark: var(--color-primary-dark, #0097a7);
+  --text: var(--color-text, #333);
+  --muted: var(--color-text-light, #666);
+  --surface: var(--color-surface, #fff);
+  --bg: var(--color-bg, #f9fafa);
+
   font-family: 'Poppins', sans-serif;
   width: 100%;
   margin: 0;
   padding: 2rem 4rem;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .info-contacto {
@@ -177,61 +185,78 @@ const enviarFormulario = async () => {
 }
 
 .info-contacto h1 {
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 2.3rem;
+  color: var(--primary-dark);
   margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+
+/* Subrayado decorativo en H1 */
+.info-contacto h1::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: var(--primary);
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
 .datos-contacto {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-}
-
-.dato {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.dato i {
-  font-size: 1.5rem;
-  color: #1a73e8;
 }
 
 .dato h3 {
   margin: 0 0 0.5rem 0;
-  color: #333;
+  color: var(--primary-dark);
+  font-size: 1.1rem;
 }
 
-.dato p {
+.dato p,
+.dato a {
   margin: 0;
-  color: #666;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .dato a {
-  color: #666;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .dato a:hover {
-  color: #1a73e8;
+  color: var(--primary);
 }
 
+/* Formulario */
 .formulario-contacto {
   margin-bottom: 3rem;
 }
 
 .form-grupo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.9rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 1rem;
+  background: var(--surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(0,188,212,0.15);
 }
 
 textarea {
@@ -239,56 +264,50 @@ textarea {
   resize: vertical;
 }
 
+/* Botón */
 button {
-  background-color: #F6911D;
+  background-color: var(--primary-dark);
   color: white;
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1.2rem;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: relative;
-  backface-visibility: hidden;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 200px;
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 button:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-  background-color: #F6911D;
+  background-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
 button i {
-  margin-right: 0.7rem;
+  margin-right: 0.6rem;
 }
 
-.mapa {
-  width: 100%;
-  height: 450px;
-  margin-top: 2rem;
-}
-
+/* PDF input */
 .pdf-label {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.3rem;
   background-color: #f5f5f5;
-  border: 1px dashed #ddd;
-  border-radius: 4px;
+  border: 1px dashed #bbb;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .pdf-label:hover {
-  background-color: #e9e9e9;
-  border-color: #1a73e8;
+  background-color: #eefbfc;
+  border-color: var(--primary);
+  color: var(--primary-dark);
 }
 
 .pdf-input {
@@ -298,28 +317,21 @@ button i {
 .pdf-info {
   display: block;
   margin-top: 0.5rem;
-  color: #666;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
-.trabajo-toggle {
-  background-color: transparent;
-  color: black;
-  padding: 0.5rem 1rem;
-  border: 1px solid black;
-  min-width: auto;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+/* Mapa */
+.mapa {
+  width: 100%;
+  height: 450px;
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.trabajo-toggle:hover {
-  background-color: transparent;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .datos-contacto {
-    grid-template-columns: 1fr;
-  }
-  
   .contacto-container {
     padding: 1rem;
   }

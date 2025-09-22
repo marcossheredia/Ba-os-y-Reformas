@@ -50,65 +50,100 @@
 </template>
 
 <style scoped>
+:host {
+  --nav-bg: #0D3642;      /* azul oscuro corporativo */
+  --accent: #00BCD4;      /* cian principal */
+  --accent-2:#58B7AE;     /* verde-agua suave */
+  --accent-dark:#0097A7;  /* cian más oscuro */
+  --orange:#F6911D;       /* naranja destacado */
+  --ink:#0b3340;          /* texto en bloques claros */
+}
+
+/* ====== TÍTULO PRINCIPAL ====== */
 .title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.7rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 700;
+  color: var(--nav-bg);
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
+/* Línea decorativa naranja */
+.divider-naranja {
+  border-color: var(--orange) !important;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+/* ====== TEXTOS ====== */
 .subtitle {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   text-align: left;
-  background-color: #f9f9f9;
+  background: #fdfdfd;
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 14px;
   height: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  color: var(--ink);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.subtitle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
 }
 
+/* ====== CONTENEDOR ====== */
 .contenedor-centrado {
-  max-width: 1800px;
+  max-width: 1600px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.divider-naranja {
-  border-color: #F6911D !important;
-  opacity: 1;
-}
-
+/* ====== SECCIÓN CONSULTA ====== */
 .consulta-section {
-  padding: 4rem 1rem;
+  margin-top: 3rem;
+  padding: 3rem 1rem;
   text-align: center;
-  border-radius: 8px;
+  background: linear-gradient(135deg, var(--nav-bg), #134d5d);
+  border-radius: 12px;
+  color: #fff;
 }
-
-.consulta-container {
-  margin: 0 auto;
-}
-
 .consulta-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #fff;
 }
 
+/* Botón de contacto */
 .contact-button {
   font-size: 1rem;
-  background-color: #808990;
+  background: var(--accent);
   color: #fff;
-  padding: 0.6rem 2rem;
-  border: 2px solid #f6911d;
-  border-radius: 25px;
-  font-weight: bold;
+  padding: 0.7rem 2.2rem;
+  border: 2px solid var(--orange);
+  border-radius: 30px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Segoe UI', Calibri, sans-serif;
 }
-
 .contact-button:hover {
-  background-color: #6b7379;
-  transform: scale(1.03);
+  background: var(--accent-dark);
+  transform: scale(1.05);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 960px){
+  .subtitle { font-size: 1rem; padding: 1.2rem; }
+  .consulta-title { font-size: 1.3rem; }
+}
+@media (max-width: 600px){
+  .title { font-size: 2rem; }
 }
 </style>
+

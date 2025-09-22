@@ -207,435 +207,435 @@ function prevSlide() {
 </section>
 
 </template>
-<style scoped>
-/* 🎞️ Carrusel */
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-}
-
-.slide-container {
-  position: absolute;
-  inset: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Overlay fijo con navegación y texto */
-.fixed-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none; /* deja pasar clicks excepto en nav/content */
-}
-
-.nav-and-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
-  pointer-events: auto;
-  color: white;
-}
-
-.nav-and-content span {
-  font-size: 3rem;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.2s;
-}
-.nav-and-content span:hover {
-  transform: scale(1.2);
-}
-
-.content {
-  text-align: center;
-  max-width: 600px;
-  padding: 1rem 2rem;
-  background: rgba(0,0,0,0.5);
-  border-radius: 12px;
-}
-
-.content h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.content p {
-  font-size: 1.2rem;
-}
-
-/* Indicadores de progreso */
-.progress-indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.progress-line {
-  width: 80px;
-  height: 4px;
-  background: rgba(255,255,255,0.3);
-  border-radius: 2px;
-  overflow: hidden;
-}
-.progress-fill {
-  height: 100%;
-  background: #4caf50;
-  transition: width 0.1s linear;
-}
-
-/* ✨ Sección Conócenos */
-.conocenos-section {
-  padding: 5rem 2rem;
-  background: #f9f9f9;
-}
-
-.conocenos-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.imagenes {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-.img-left-top,
-.img-left-bottom {
-  grid-column: 1;
-}
-.img-right {
-  grid-column: 2;
-  grid-row: span 2;
-}
-
-.imagenes img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.texto {
-  flex: 1;
-  max-width: 500px;
-}
-.texto h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.texto p {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* ⭐ Sección Mejor opción */
-.mejor-opcion-section {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: #fff;
-}
-.mejor-opcion-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.mejor-opcion-tabla {
-  width: 100%;
-  margin-top: 2rem;
-  border-collapse: collapse;
-}
-.mejor-opcion-tabla td {
-  padding: 1rem;
-  border: 1px solid #ddd;
-}
-.mejor-opcion-imagen {
-  margin-top: 2rem;
-}
-.mejor-opcion-imagen img {
-  max-width: 150px;
-}
-
-/* 🤝 Sección Confían */
-.confian-section {
-  padding: 5rem 2rem;
-  background: #f4f4f4;
-}
-.confian-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-.confian-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-.confian-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-.confian-logos img {
-  max-height: 60px;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.3s;
-}
-.confian-logos img:hover {
-  filter: grayscale(0%);
-}
-
-/* 📱 Responsive */
-@media (max-width: 768px) {
+  <style scoped>
+  /* 🎞️ Carrusel */
   .carousel {
-    height: 60vh;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
   }
+
+  .slide-container {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Overlay fijo con navegación y texto */
+  .fixed-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* deja pasar clicks excepto en nav/content */
+  }
+
+  .nav-and-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    pointer-events: auto;
+    color: white;
+  }
+
   .nav-and-content span {
-    font-size: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
   }
+  .nav-and-content span:hover {
+    transform: scale(1.2);
+  }
+
+  .content {
+    text-align: center;
+    max-width: 600px;
+    padding: 1rem 2rem;
+    background: rgba(0,0,0,0.5);
+    border-radius: 12px;
+  }
+
   .content h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
+  .content p {
+    font-size: 1.2rem;
+  }
+
+  /* Indicadores de progreso */
+  .progress-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .progress-line {
+    width: 80px;
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #4caf50;
+    transition: width 0.1s linear;
+  }
+
+  /* ✨ Sección Conócenos */
+  .conocenos-section {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+  }
+
+  .conocenos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
   .imagenes {
-    grid-template-columns: 1fr;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .img-left-top,
+  .img-left-bottom {
+    grid-column: 1;
   }
   .img-right {
-    grid-row: auto;
-    grid-column: auto;
+    grid-column: 2;
+    grid-row: span 2;
   }
-}
-.banera-section {
-  padding: 5rem 2rem;
-  background: #f9f9f9;
-}
 
-.banera-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.banera-container .imagenes {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.banera-container .img-left-top,
-.banera-container .img-left-bottom {
-  grid-column: 1;
-}
-
-.banera-container .img-right {
-  grid-column: 2;
-  grid-row: span 2;
-}
-
-.banera-container img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.banera-container .texto {
-  flex: 1;
-  max-width: 500px;
-}
-
-.banera-container .texto h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.banera-container .texto p {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .banera-container {
-    flex-direction: column;
+  .imagenes img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   }
-  .banera-container .texto h2,
-  .banera-container .texto p {
+
+  .texto {
+    flex: 1;
+    max-width: 500px;
+  }
+  .texto h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .texto p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* ⭐ Sección Mejor opción */
+  .mejor-opcion-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: #fff;
+  }
+  .mejor-opcion-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .mejor-opcion-tabla {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+  }
+  .mejor-opcion-tabla td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+  }
+  .mejor-opcion-imagen {
+    margin-top: 2rem;
+  }
+  .mejor-opcion-imagen img {
+    max-width: 150px;
+  }
+
+  /* 🤝 Sección Confían */
+  .confian-section {
+    padding: 5rem 2rem;
+    background: #f4f4f4;
+  }
+  .confian-container {
+    max-width: 1000px;
+    margin: 0 auto;
     text-align: center;
   }
+  .confian-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .confian-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .confian-logos img {
+    max-height: 60px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+  }
+  .confian-logos img:hover {
+    filter: grayscale(0%);
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .carousel {
+      height: 60vh;
+    }
+    .nav-and-content span {
+      font-size: 2rem;
+    }
+    .content h1 {
+      font-size: 1.5rem;
+    }
+    .imagenes {
+      grid-template-columns: 1fr;
+    }
+    .img-right {
+      grid-row: auto;
+      grid-column: auto;
+    }
+  }
+  .banera-section {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+  }
+
+  .banera-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
   .banera-container .imagenes {
-    grid-template-columns: 1fr;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
+
+  .banera-container .img-left-top,
+  .banera-container .img-left-bottom {
+    grid-column: 1;
+  }
+
   .banera-container .img-right {
-    grid-row: auto;
-    grid-column: auto;
+    grid-column: 2;
+    grid-row: span 2;
   }
-}
-/* --- Layout general --- */
-.banera-section{
-  padding: clamp(24px, 5vw, 56px) 0;
-  background: #f6f8f8;
-}
-.banera-container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 clamp(16px, 3vw, 32px);
-  display: grid;
-  grid-template-columns: minmax(280px, 520px) 1fr;
-  gap: clamp(16px, 3vw, 40px);
-  align-items: center;
-}
 
-/* --- Mosaico 3x2 de imágenes --- */
-.imagenes{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "lt rt"
-    "lm rm"
-    "lb rb";
-  gap: 16px;
-}
+  .banera-container img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
 
-.img{ 
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 6px 24px rgba(0,0,0,.08);
-  aspect-ratio: 1/1;     /* cuadrados bonitos */
-  display: grid;
-  place-items: center;
-}
-.img img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-  transition: transform .35s ease;
-}
-.img:hover img{ transform: scale(1.06); }
+  .banera-container .texto {
+    flex: 1;
+    max-width: 500px;
+  }
 
-/* Posiciones en la cuadrícula */
-.img-left-top{ grid-area: lt; }
-.img-right{ grid-area: rt; }           /* top-right existente */
-.img-left-middle{ grid-area: lm; }     /* NUEVA */
-.img-right-middle{ grid-area: rm; }    /* NUEVA */
-.img-left-bottom{ grid-area: lb; }
-.img-right-bottom{ grid-area: rb; }
+  .banera-container .texto h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
-/* --- Texto --- */
-.texto h2{
-  font-size: clamp(28px, 3.2vw, 44px);
-  line-height: 1.1;
-  margin: 0 0 10px;
-  color: #0b3340;
-}
-.texto p{ color: #23424a; margin: 8px 0; }
-.texto ul{ margin: 12px 0 18px; padding-left: 20px; color:#23424a; }
-.texto .cta{ margin-top: 10px; font-weight: 700; color:#0b3340; }
+  .banera-container .texto p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 
-/* --- Responsive --- */
-@media (max-width: 980px){
+  /* Responsive */
+  @media (max-width: 768px) {
+    .banera-container {
+      flex-direction: column;
+    }
+    .banera-container .texto h2,
+    .banera-container .texto p {
+      text-align: center;
+    }
+    .banera-container .imagenes {
+      grid-template-columns: 1fr;
+    }
+    .banera-container .img-right {
+      grid-row: auto;
+      grid-column: auto;
+    }
+  }
+  /* --- Layout general --- */
+  .banera-section{
+    padding: clamp(24px, 5vw, 56px) 0;
+    background: #f6f8f8;
+  }
   .banera-container{
-    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 3vw, 32px);
+    display: grid;
+    grid-template-columns: minmax(280px, 520px) 1fr;
+    gap: clamp(16px, 3vw, 40px);
+    align-items: center;
   }
+
+  /* --- Mosaico 3x2 de imágenes --- */
   .imagenes{
-    order: 2;                   /* texto arriba, imágenes abajo (puedes quitarlo si no lo quieres) */
-    grid-template-columns: repeat(3, 1fr);  /* 3 columnas en móvil ancho */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "lt rt lm"
-      "rm lb rb";
+      "lt rt"
+      "lm rm"
+      "lb rb";
+    gap: 16px;
   }
-}
 
-/* --- Conócenos (aislado para que no choque con otras secciones) --- */
-.conocenos-section {
-  padding: 5rem 2rem;
-  background: #f9f9f9;
-}
-.conocenos-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-}
+  .img{ 
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,.08);
+    aspect-ratio: 1/1;     /* cuadrados bonitos */
+    display: grid;
+    place-items: center;
+  }
+  .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.01);
+    transition: transform .35s ease;
+  }
+  .img:hover img{ transform: scale(1.06); }
 
-/* GRID de 2 columnas:
-   ┌─────────┬─────────┐
-   │ leftTop │  right  │
-   │ leftBot │  right  │
-   └─────────┴─────────┘
-*/
-.conocenos-imagenes {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "lt r"
-    "lb r";
-  gap: 1rem;
+  /* Posiciones en la cuadrícula */
+  .img-left-top{ grid-area: lt; }
+  .img-right{ grid-area: rt; }           /* top-right existente */
+  .img-left-middle{ grid-area: lm; }     /* NUEVA */
+  .img-right-middle{ grid-area: rm; }    /* NUEVA */
+  .img-left-bottom{ grid-area: lb; }
+  .img-right-bottom{ grid-area: rb; }
 
-  /* Filas homogéneas y responsivas: la derecha (2 filas) mantiene proporciones
-     y evita “descolgarse” */
-  grid-auto-rows: minmax(140px, 18vw);
-  min-width: 280px;
-}
+  /* --- Texto --- */
+  .texto h2{
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1.1;
+    margin: 0 0 10px;
+    color: #0b3340;
+  }
+  .texto p{ color: #23424a; margin: 8px 0; }
+  .texto ul{ margin: 12px 0 18px; padding-left: 20px; color:#23424a; }
+  .texto .cta{ margin-top: 10px; font-weight: 700; color:#0b3340; }
 
-.conocenos-img {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  background: #fff;
-}
+  /* --- Responsive --- */
+  @media (max-width: 980px){
+    .banera-container{
+      grid-template-columns: 1fr;
+    }
+    .imagenes{
+      order: 2;                   /* texto arriba, imágenes abajo (puedes quitarlo si no lo quieres) */
+      grid-template-columns: repeat(3, 1fr);  /* 3 columnas en móvil ancho */
+      grid-template-areas:
+        "lt rt lm"
+        "rm lb rb";
+    }
+  }
 
-/* Áreas */
-.conocenos-img-left-top { grid-area: lt; }
-.conocenos-img-left-bottom { grid-area: lb; }
-.conocenos-img-right { grid-area: r; }
+  /* --- Conócenos (aislado para que no choque con otras secciones) --- */
+  .conocenos-section {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+  }
+  .conocenos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
 
-/* Imágenes: ocupan su contenedor sin deformarse */
-.conocenos-img img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-/* Móvil: 1 columna; la imagen “right” pasa al medio */
-@media (max-width: 768px) {
+  /* GRID de 2 columnas:
+    ┌─────────┬─────────┐
+    │ leftTop │  right  │
+    │ leftBot │  right  │
+    └─────────┴─────────┘
+  */
   .conocenos-imagenes {
-    grid-template-columns: 1fr;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "lt"
-      "r"
-      "lb";
-    grid-auto-rows: minmax(160px, 40vw);
-  }
-}
+      "lt r"
+      "lb r";
+    gap: 1rem;
 
-</style>
+    /* Filas homogéneas y responsivas: la derecha (2 filas) mantiene proporciones
+      y evita “descolgarse” */
+    grid-auto-rows: minmax(140px, 18vw);
+    min-width: 280px;
+  }
+
+  .conocenos-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: #fff;
+  }
+
+  /* Áreas */
+  .conocenos-img-left-top { grid-area: lt; }
+  .conocenos-img-left-bottom { grid-area: lb; }
+  .conocenos-img-right { grid-area: r; }
+
+  /* Imágenes: ocupan su contenedor sin deformarse */
+  .conocenos-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Móvil: 1 columna; la imagen “right” pasa al medio */
+  @media (max-width: 768px) {
+    .conocenos-imagenes {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "lt"
+        "r"
+        "lb";
+      grid-auto-rows: minmax(160px, 40vw);
+    }
+  }
+
+  </style>

@@ -68,44 +68,55 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
 </template>
 
 <style scoped>
-.bg-custom {
-  background-color: #0D3642 !important; /* azul verdoso oscuro */
-}
-
-.footer-link {
-  color: #FFFFFF !important; /* texto en blanco para contraste */
-  text-transform: none !important;
-  font-size: 0.9rem !important;
-  white-space: nowrap;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #58B7AE !important; /* verde agua en hover */
-}
-
 .footer-wrapper {
   position: relative;
   width: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 
 .divider {
   position: relative;
   width: 100%;
   height: 3px;
-  background-color: #58B7AE; /* línea superior en verde agua */
+  background-color: var(--color-primary, #00bcd4); /* Línea superior cian */
   margin: 0;
 }
 
-.copyright-text {
-  color: #FFFFFF;
-  font-size: 0.9rem;
-  opacity: 0.85;
+.bg-custom {
+  background-color: #0B2A33 !important; /* Azul verdoso oscuro (mejor contraste con el cian) */
 }
 
+.footer-link {
+  color: #fff !important; /* texto en blanco */
+  text-transform: none !important;
+  font-size: 0.9rem !important;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  color: var(--color-primary, #00bcd4) !important; /* hover en cian */
+  transform: translateY(-2px);
+}
+
+.copyright-text {
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 1rem;
+}
+
+/* Iconos alineados mejor */
+.v-icon {
+  margin-right: 0.4rem;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .footer-link {
     font-size: 0.85rem !important;
+    margin: 0.3rem 0 !important;
   }
   
   .copyright-text {
