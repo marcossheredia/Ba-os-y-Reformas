@@ -131,12 +131,12 @@ const navItems = ref([
     hasSubmenu: true, 
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
-      { name: 'Grifos Lavabo', path: '/grifos1', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
-      { name: 'Grifos Ducha', path: '/grifos2', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
+      { name: 'Grifos Lavabo', path: '/grifos1', title: 'Catálogo completo de grifos de lavabo', ariaLabel: 'Nuestros servicios' },
+      { name: 'Grifos Ducha', path: '/grifos2', title: 'Catálogo completo de grifos de ducha', ariaLabel: 'Así funciona' },
       { 
         name: 'Grifos Cocina', 
         path: '/grifos3', 
-        title: 'Diferentes técnicas de soldadura industrial que ofrecemos', 
+        title: 'Catálogo completo de grifos de cocina', 
         ariaLabel: 'Tipos de soldadura',
         hasSubmenu: false
       }
@@ -146,7 +146,7 @@ const navItems = ref([
   { 
     name: 'PLATOS', 
     path: '/platos1', 
-    title: 'Nuestro laboratorio de análisis y control de calidad', 
+    title: 'Catálogo completo de platos de ducha', 
     ariaLabel: 'Laboratorio', 
     keywords: 'laboratorio, análisis, control calidad, pruebas',
     hasSubmenu: false
@@ -154,7 +154,7 @@ const navItems = ref([
   { 
     name: 'ESPEJOS', 
     path: '/espejos', 
-    title: 'Nuestra maquinaria industrial especializada', 
+    title: 'Catálogo completo de espejos', 
     ariaLabel: 'Maquinaria', 
     keywords: 'maquinaria industrial, equipos, tecnología',
     hasSubmenu: false, 
@@ -174,11 +174,11 @@ const navItems = ref([
     hasSubmenu: true,
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
-      { name: 'Mamparas Correderas', path: '/mamparas1', title: 'Servicios de transformación metalúrgica', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
-      { name: 'Mamparas de Aluminio ', path: '/mamparas2', title: 'Tratamientos de superficies metálicas', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
-      { name: 'Mamparas Abatibles', path: '/mamparas3', title: 'Servicios de modulación industrial', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
-      { name: 'Mamparas Plegables', path: '/mamparas4', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' },
-      { name: 'Otras soluciones', path: '/mamparas5', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' }
+      { name: 'Mamparas Correderas', path: '/mamparas1', title: 'Catálogo completo de mamparas correderas', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
+      { name: 'Mamparas de Aluminio ', path: '/mamparas2', title: 'Catálogo completo de mamparas de alumino', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
+      { name: 'Mamparas Abatibles', path: '/mamparas3', title: 'Catálogo completo de mamparas abatibles', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
+      { name: 'Mamparas Plegables', path: '/mamparas4', title: 'Catálogo completo de mamparas plegables', ariaLabel: 'Logística', component: 'Logistica.vue' },
+      { name: 'Otras soluciones', path: '/mamparas5', title: 'Catálogo completo de otras soluciones para mamparas', ariaLabel: 'Logística', component: 'Logistica.vue' }
     
     ]
     //*/
