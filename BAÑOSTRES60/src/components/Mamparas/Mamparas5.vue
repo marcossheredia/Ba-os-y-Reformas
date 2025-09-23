@@ -1,56 +1,56 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-import img1 from '@/assets/imagenes/MamparasCorr/1.1.PNG'
-import img2 from '@/assets/imagenes/MamparasCorr/1.2.PNG'
+import img1 from '@/assets/imagenes/MamparasOtras/1.1.PNG'
+import img2 from '@/assets/imagenes/MamparasOtras/1.2.PNG'
 
-import img3 from '@/assets/imagenes/MamparasCorr/2.1.PNG'
-import img4 from '@/assets/imagenes/MamparasCorr/2.2.PNG'
+import img3 from '@/assets/imagenes/MamparasOtras/2.1.PNG'
+import img4 from '@/assets/imagenes/MamparasOtras/2.2.PNG'
 
-import img5 from '@/assets/imagenes/MamparasCorr/3.1.PNG'
-import img6 from '@/assets/imagenes/MamparasCorr/3.2.PNG'
+import img5 from '@/assets/imagenes/MamparasOtras/3.1.PNG'
+import img6 from '@/assets/imagenes/MamparasOtras/3.2.PNG'
 
-import img7 from '@/assets/imagenes/MamparasCorr/4.1.PNG'
-import img8 from '@/assets/imagenes/MamparasCorr/4.2.PNG'
+import img7 from '@/assets/imagenes/MamparasOtras/4.1.PNG'
+import img8 from '@/assets/imagenes/MamparasOtras/4.2.PNG'
 
-import img9 from '@/assets/imagenes/MamparasCorr/5.1.PNG'
-import img10 from '@/assets/imagenes/MamparasCorr/5.2.PNG'
+import img9 from '@/assets/imagenes/MamparasOtras/5.1.PNG'
+import img10 from '@/assets/imagenes/MamparasOtras/5.2.PNG'
 
-import img11 from '@/assets/imagenes/MamparasCorr/6.1.PNG'
-import img12 from '@/assets/imagenes/MamparasCorr/6.2.PNG'
+import img11 from '@/assets/imagenes/MamparasOtras/6.1.PNG'
+import img12 from '@/assets/imagenes/MamparasOtras/6.2.PNG'
 
-import img13 from '@/assets/imagenes/MamparasCorr/7.1.PNG'
-import img14 from '@/assets/imagenes/MamparasCorr/7.2.PNG'
+import img13 from '@/assets/imagenes/MamparasOtras/7.1.PNG'
+import img14 from '@/assets/imagenes/MamparasOtras/7.2.PNG'
 
-import img15 from '@/assets/imagenes/MamparasCorr/8.1.PNG'
-import img16 from '@/assets/imagenes/MamparasCorr/8.2.PNG'
+import img15 from '@/assets/imagenes/MamparasOtras/8.1.PNG'
+import img16 from '@/assets/imagenes/MamparasOtras/8.2.PNG'
 
-import img17 from '@/assets/imagenes/MamparasCorr/9.1.PNG'
-import img18 from '@/assets/imagenes/MamparasCorr/9.2.PNG'
+import img17 from '@/assets/imagenes/MamparasOtras/9.1.PNG'
+import img18 from '@/assets/imagenes/MamparasOtras/9.2.PNG'
 
-import img19 from '@/assets/imagenes/MamparasCorr/10.1.PNG'
-import img20 from '@/assets/imagenes/MamparasCorr/10.2.PNG'
+import img19 from '@/assets/imagenes/MamparasOtras/10.1.PNG'
+import img20 from '@/assets/imagenes/MamparasOtras/10.2.PNG'
 
-import img21 from '@/assets/imagenes/MamparasCorr/11.1.PNG'
-import img22 from '@/assets/imagenes/MamparasCorr/11.2.PNG'
+import img21 from '@/assets/imagenes/MamparasOtras/11.1.PNG'
+import img22 from '@/assets/imagenes/MamparasOtras/11.2.PNG'
 
-import img23 from '@/assets/imagenes/MamparasCorr/12.1.PNG'
-import img24 from '@/assets/imagenes/MamparasCorr/12.2.PNG'
+import img23 from '@/assets/imagenes/MamparasOtras/12.1.PNG'
+import img24 from '@/assets/imagenes/MamparasOtras/12.2.PNG'
 
-import img25 from '@/assets/imagenes/MamparasCorr/13.1.PNG'
-import img26 from '@/assets/imagenes/MamparasCorr/13.2.PNG'
+import img25 from '@/assets/imagenes/MamparasOtras/13.1.PNG'
+import img26 from '@/assets/imagenes/MamparasOtras/13.2.PNG'
 
-import img27 from '@/assets/imagenes/MamparasCorr/14.1.PNG'
-import img28 from '@/assets/imagenes/MamparasCorr/14.2.PNG'
+import img27 from '@/assets/imagenes/MamparasOtras/14.1.PNG'
+import img28 from '@/assets/imagenes/MamparasOtras/14.2.PNG'
 
-import img29 from '@/assets/imagenes/MamparasCorr/15.1.PNG'
-import img30 from '@/assets/imagenes/MamparasCorr/15.2.PNG'
+import img29 from '@/assets/imagenes/MamparasOtras/15.1.PNG'
+import img30 from '@/assets/imagenes/MamparasOtras/15.2.PNG'
 
-import img31 from '@/assets/imagenes/MamparasCorr/16.1.PNG'
-import img32 from '@/assets/imagenes/MamparasCorr/16.2.PNG'
+import img31 from '@/assets/imagenes/MamparasOtras/16.1.PNG'
+import img32 from '@/assets/imagenes/MamparasOtras/16.2.PNG'
 
-import img33 from '@/assets/imagenes/MamparasCorr/17.1.PNG'
-import img34 from '@/assets/imagenes/MamparasCorr/17.2.PNG'
+import img33 from '@/assets/imagenes/MamparasOtras/17.1.PNG'
+import img34 from '@/assets/imagenes/MamparasOtras/17.2.PNG'
 
 import img35 from '@/assets/imagenes/MamparasCorr/18.1.PNG'
 import img36 from '@/assets/imagenes/MamparasCorr/18.2.PNG'
@@ -783,352 +783,6 @@ onMounted(() => {
     </v-row>
   </v-container>
 
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img35"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO REDONDO</h2>
-          <p>
-            Cristal circular de 4 mm de espesor y arenado de
-            35 mm. Con luz frontal de 5500 oK, sensor on/off
-            antivaho y bastidor de PVC.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img36"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img37"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO ARENA</h2>
-          <p>
-            Cristal circular de 4 mm de espesor y arenado de 35 mm.
-            Luz frontal y retroiluminada de 5500 oK. Bastidor de
-            goma EVA.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img38"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img39"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO HULA</h2>
-          <p>
-            Espejo circular con 4 mm de espesor con film antiexplosión.
-            Encendido de luz progresiva de 5500 oK. Posiciones
-            de instalación: izquierda o derecha.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img40"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img41"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO LUK</h2>
-          <p>
-            Cristal cápsula de 4 mm de espesor. 
-            Fijación mediante pletinas metálicas.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img42"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img43"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO AURA</h2>
-          <p>
-            Cristal cápsula de 4 mm de espesor. 
-            Luz retroiluminada de 5500 oK. Bastidor de goma EVA.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img44"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img45"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO CALAS</h2>
-          <p>
-            Cristal cápsula de 4 mm de espesor y arenado de 30 mm. Luz
-            retroiluminada de 5500 oK. Bastidor de goma EVA.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img46"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img47"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO CALAS VESTIDOR</h2>
-          <p>
-            Cristal cápsula de 4 mm de espesor y arenado de
-            30 mm. Luz retroiluminada de 5500 oK. Bastidor de
-            goma EVA.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img48"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img49"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO EROS</h2>
-          <p>
-            Cristal cápsula de 4 mm de espesor y arenado de 25 mm. Luz frontal y
-            retroiluminada de 5500 oK. Bastidor de goma EVA.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img50"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img51"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO DANTE</h2>
-          <p>
-            Cristal cápsula de 4 mm de espesor y arenado de 30 mm
-            con film antiexplosión. Luz frontal regulable de 3000
-            a 6500 oK. Marco exterior de aluminio.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img52"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
 
     <v-dialog v-model="dialog" max-width="800px" persistent>
     <v-card>
