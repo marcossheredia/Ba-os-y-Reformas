@@ -40,12 +40,7 @@ onMounted(() => {
     <v-container>
       <v-row justify="center">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS LAVABO</h1>
-        </v-col>
-        <v-col cols="12" md="10" lg="8">
-          <p class="servicios-intro text-body-1">
-            Grifos <strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos
-          </p>
+          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS DE COCINA</h1>
         </v-col>
       </v-row>
     </v-container>

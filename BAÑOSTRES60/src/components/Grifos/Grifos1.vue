@@ -1,53 +1,77 @@
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
+
+
+import img1 from '@/assets/imagenes/Grifos/Gr 1/1.1.JPG'
+import img2 from '@/assets/imagenes/Grifos/Gr 1/1.2.JPG'
+import img3 from '@/assets/imagenes/Grifos/Gr 1/1.3.JPG'
+
+import img4 from '@/assets/imagenes/Grifos/Gr 2/2.1.JPG'
+import img5 from '@/assets/imagenes/Grifos/Gr 2/2.2.JPG'
+import img6 from '@/assets/imagenes/Grifos/Gr 2/2.3.JPG'
+
+import img7 from '@/assets/imagenes/Grifos/3.1.JPG'
+import img8 from '@/assets/imagenes/Grifos/3.2.JPG'
+import img9 from '@/assets/imagenes/Grifos/3.3.JPG'
+
+import img10 from '@/assets/imagenes/Grifos/4.1.JPG'
+import img11 from '@/assets/imagenes/Grifos/4.2.JPG'
+import img12 from '@/assets/imagenes/Grifos/4.3.JPG'
+
+import img13 from '@/assets/imagenes/Grifos/Gr 1/1.1.JPG'
+import img14 from '@/assets/imagenes/Grifos/Gr 1/1.2.JPG'
+import img15 from '@/assets/imagenes/Grifos/Gr 1/1.3.JPG'
+
+
+const dialog = ref(false)
+const selectedImage = ref(null)
+
+function openImage(img) {
+  selectedImage.value = img
+  dialog.value = true
+}
 
 // Optimizar para SEO
 onMounted(() => {
-  // Actualizar el título de la página
   document.title = 'Bañostres60';
-  
-  // Agregar meta descripción para SEO
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
-    metaDescription.setAttribute('content', 'Servicio profesional de soldadura industrial, soldadura MIG MAG robotizada, acero inoxidable, brazing y tratamiento de metales. Tecnología puntera y optimización de procesos industriales.');
+    metaDescription.setAttribute(
+      'content',
+      'Servicio profesional de soldadura industrial, soldadura MIG MAG robotizada, acero inoxidable, brazing y tratamiento de metales. Tecnología puntera y optimización de procesos industriales.'
+    );
   }
 });
 </script>
 
 <template>
-
-  <!-- Contenedor principal de la vista de servicios -->
   <v-sheet class="servicios-header py-8" color="#f5f5f5">
     <v-container>
       <v-row justify="center">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS LAVABO</h1>
-        </v-col>
-        <v-col cols="12" md="10" lg="8">
-          <p class="servicios-intro text-body-1">
-            Grifos <strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos
-          </p>
+          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS DE LAVABO</h1>
         </v-col>
       </v-row>
     </v-container>
   </v-sheet>
-  
-    <v-container class="py-8">
-      <v-row>
-        <!-- Arriba izquierda: imagen -->
-        <v-col cols="12" md="6">
-          <v-img
-            src="src/assets/imagenes/Grifos/Gr 1/1.1.JPG"
-            alt="Descripción de la imagen 1"
-            height="300"
-            contain
-            class="cursor-pointer"
-            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.1.JPG')"
-          />
-        </v-col>
+
+  <!--BLOQUE-->
+  <v-container class="py-8">
+    <v-row>
+      <!-- Arriba izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img1"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img1)"
+        />
+      </v-col>
 
         <!-- Arriba derecha: texto/información -->
-        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
             <h2>GRIFO 1.1.1 MODELO XZY</h2>
             <p>
@@ -55,51 +79,51 @@ onMounted(() => {
               Funciona de forma muy correcta levantas y sale agua.
             </p>
           </div>
-        </v-col>
+      </v-col>
 
         <!-- Abajo izquierda: imagen -->
-        <v-col cols="12" md="6">
-          <v-img
-            src="src/assets/imagenes/Grifos/Gr 1/1.2.JPG"
-            alt="Descripción de la imagen 2"
-            height="300"
-            contain
-            class="cursor-pointer"
-            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.2.JPG')"
-          />
-        </v-col>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img2"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
 
         <!-- Abajo derecha: imagen -->
-        <v-col cols="12" md="6">
-          <v-img
-            src="src/assets/imagenes/Grifos/Gr 1/1.3.JPG"
-            alt="Descripción de la imagen 3"
-            height="300"
-            contain
-            class="cursor-pointer"
-            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.3.JPG')"
-          />
-        </v-col>
-      </v-row>
-    </v-container>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img3"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img3)"
+        />
+      </v-col>
+    </v-row>
+  </v-container>
 
-      
-    <v-container class="py-8">
-      <v-row>
-        <!-- Arriba izquierda: imagen -->
-        <v-col cols="12" md="6">
-          <v-img
-            src="src/assets/imagenes/Grifos/Gr 1/1.1.JPG"
-            alt="Descripción de la imagen 1"
-            height="300"
-            contain
-            class="cursor-pointer"
-            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.1.JPG')"
-          />
-        </v-col>
+    <!--BLOQUE-->
+  <v-container class="py-8">
+    <v-row>
+      <!-- Arriba izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img4"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img4)"
+        />
+      </v-col>
 
         <!-- Arriba derecha: texto/información -->
-        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
             <h2>GRIFO 1.1.1 MODELO XZY</h2>
             <p>
@@ -107,35 +131,255 @@ onMounted(() => {
               Funciona de forma muy correcta levantas y sale agua.
             </p>
           </div>
-        </v-col>
+      </v-col>
 
         <!-- Abajo izquierda: imagen -->
-        <v-col cols="12" md="6">
-          <v-img
-            src="src/assets/imagenes/Grifos/Gr 1/1.2.JPG"
-            alt="Descripción de la imagen 2"
-            height="300"
-            contain
-            class="cursor-pointer"
-            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.2.JPG')"
-          />
-        </v-col>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img5"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img5)"
+        />
+      </v-col>
 
         <!-- Abajo derecha: imagen -->
-        <v-col cols="12" md="6">
-          <v-img
-            src="src/assets/imagenes/Grifos/Gr 1/1.3.JPG"
-            alt="Descripción de la imagen 3"
-            height="300"
-            contain
-            class="cursor-pointer"
-            @click="openImage('src/assets/imagenes/Grifos/Gr 1/1.3.JPG')"
-          />
-        </v-col>
-      </v-row>
-    </v-container>
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img6"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img6)"
+        />
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <!--BLOQUE-->
+  <v-container class="py-8">
+    <v-row>
+      <!-- Arriba izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img7"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img7)"
+        />
+      </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
+          </div>
+      </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img8"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img8)"
+        />
+      </v-col>
+
+        <!-- Abajo derecha: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img9"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img9)"
+        />
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <!--BLOQUE-->
+  <v-container class="py-8">
+    <v-row>
+      <!-- Arriba izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img10"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img10)"
+        />
+      </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
+          </div>
+      </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img11"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img11)"
+        />
+      </v-col>
+
+        <!-- Abajo derecha: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img12"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img12)"
+        />
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <!--BLOQUE-->
+  <v-container class="py-8">
+    <v-row>
+      <!-- Arriba izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img1"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img1)"
+        />
+      </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
+          </div>
+      </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img2"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+        <!-- Abajo derecha: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img3"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img3)"
+        />
+      </v-col>
+    </v-row>
+  </v-container>
+
+    <!--BLOQUE-->
+  <v-container class="py-8">
+    <v-row>
+      <!-- Arriba izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img1"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img1)"
+        />
+      </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
+          </div>
+      </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img2"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img2)"
+        />
+      </v-col>
+
+        <!-- Abajo derecha: imagen -->
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img3"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img3)"
+        />
+      </v-col>
+    </v-row>
+  </v-container>
+
+  <v-dialog v-model="dialog" max-width="800px" persistent>
+    <v-card>
+      <v-img :src="selectedImage" height="500" contain />
+      <v-card-actions>
+        <v-spacer />
+        <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
     
 </template>
+
+
 <style scoped>
 /* ===========================
    Grifos Lavabo – Estilos
