@@ -1130,15 +1130,12 @@ onMounted(() => {
     </v-row>
   </v-container>
 
-    <v-dialog v-model="dialog" max-width="800px" persistent>
-    <v-card>
-      <v-img :src="selectedImage" height="500" contain />
-      <v-card-actions>
-        <v-spacer />
-        <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
-      </v-card-actions>
-    </v-card>
-  </v-dialog>
+<v-dialog v-model="dialog" max-width="800px">
+  <v-card>
+    <v-img :src="selectedImage" height="500" contain />
+  </v-card>
+</v-dialog>
+
 </template>
 
 <style scoped>
