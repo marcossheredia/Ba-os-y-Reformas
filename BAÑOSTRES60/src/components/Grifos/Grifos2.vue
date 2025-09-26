@@ -83,10 +83,16 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO 1.1.1 MODELO XZY</h2>
+          <h2>GRIFO INVERTER R</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cuerpo grifería latón
+            Barra telescópica Inox 84-136 cm
+            Cartucho cerámico 35 mm ‘cold-start’
+            Soporte regulable en altura
+            Rociador extraplano inox 250 mm c/antical
+            Desviador de caudal integrado en la grifería
+            Válvula antirretorno
+            Incluye opción limit. caudal ecológico 8L/min
           </p>
         </div>
       </v-col>
@@ -115,16 +121,20 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img3)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO 1.1.1 MODELO XZY</h2>
+          <h2>GRIFO INVERTER C</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cuerpo grifería latón
+            Rociador cuadrado Inox extraplano 25x25 cm con antical
+            Barra ducha 3x1,5 cm telescópica (80-118 cm)
+            Soporte mango regulable en altura
+            Flexo PVC antitorsión
+            Cartucho termostático 40 mmØ sensor Vernet
           </p>
         </div>
       </v-col>
@@ -137,7 +147,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img4)"
         />
       </v-col>
     </v-row>
@@ -152,16 +162,21 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img5)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>GRIFO QUADRA ÉLITE</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Grifería latón
+          Rociador redondo Inox extraplano Ø25 cm con antical
+          Barra telescópica (87-118 cm)
+          Soporte mango regulable en altura
+          Flexo PVC antitorsión
+          Cartucho termostático 40 mmØ sensor Vernet
+          Mango 3 posiciones c/antical
         </p>
       </div>
     </v-col>
@@ -174,7 +189,7 @@ onMounted(() => {
         height="250"
         contain
         class="cursor-pointer"
-        @click="openImage(img2)"
+        @click="openImage(img6)"
       />
     </v-col>
   </v-row>
@@ -190,16 +205,21 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img7)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>GRIFO ROUND ELITE</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Grifería latón
+          Rociador redondo Inox extraplano Ø25 cm con antical
+          Barra telescópica (87-118 cm)
+          Soporte mango regulable en altura
+          Flexo PVC antitorsión
+          Cartucho termostático 40 mmØ sensor Vernet
+          Mango 3 posiciones c/antical
         </p>
       </div>
     </v-col>
@@ -212,7 +232,7 @@ onMounted(() => {
         height="250"
         contain
         class="cursor-pointer"
-        @click="openImage(img2)"
+        @click="openImage(img8)"
       />
     </v-col>
   </v-row>
@@ -228,16 +248,19 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img11)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>TERMOSTÁTICO ORION</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Conjunto de empotrar 2/3 funciones
+          Cuerpo grifería en latón
+          Caja de registro
+          Cartucho termostático con sensor Vernet
+          Flexo antitorsión PVC
         </p>
       </div>
     </v-col>
@@ -254,16 +277,20 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img12)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>TERMOSTÁTICO ROUND</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Conjunto de empotrar 2/3 funciones
+          Cuerpo grifería en latón
+          Caja de registro
+          Cartucho termostático con sensor Vernet
+          Flexo antitorsión PVC
+          Mango 3 posiciones c/antical
         </p>
       </div>
     </v-col>
@@ -280,16 +307,18 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img13)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>MONOMANDO ORION</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Cuerpo grifería en latón
+          Caja de registro
+          Cartucho cerámico 35 mm sedal
+          Flexo antitorsión PVC
         </p>
       </div>
     </v-col>
@@ -306,16 +335,19 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img14)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>MONOMANDO SIRIO</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Cuerpo grifería en latón
+          Caja de registro
+          Cartucho cerámico 35 mm sedal
+          Flexo antitorsión PVC
+          Mango 3 posiciones c/antical
         </p>
       </div>
     </v-col>
@@ -332,16 +364,17 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img15)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>SIRIO 1 FUNCIÓN</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Cuerpo grifería en latón
+          Cartucho cerámico 35 mm
+          Placa Ø135 mm
         </p>
       </div>
     </v-col>
@@ -358,16 +391,20 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img16)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>UNIVERSAL</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Cuerpo grifería en latón
+          Placa efecto cristal 139x139 mm
+          Caja de registro
+          Cartucho cerámico 35 mm
+          Flexo PVC antitorsión 1,7 m
+          Desviador 2 funciones progresivo
         </p>
       </div>
     </v-col>
@@ -383,16 +420,16 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img28)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>CAÑO BAÑERA</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Aireador Neoperl
+          Conexión rosca 1/2"
         </p>
       </div>
     </v-col>
@@ -408,16 +445,19 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img29)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>ROCIADOR DUCHA MINIMAL</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Acero inoxidable 304
+          Sistema de fácil limpieza para prevenir la cal
+          Conexión de Entrada 1/2”
+          Aireador spray ref. 3291 - 40 puntos
+          Aireador cascada ref. 3292 - 10 puntos
         </p>
       </div>
     </v-col>
@@ -433,17 +473,13 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img17)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
-        <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
-        </p>
+        <h2>MANETA CARTUCHO 35</h2>
       </div>
     </v-col>
   </v-row>
@@ -458,17 +494,13 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img18)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
-        <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
-        </p>
+        <h2>MANETA CARTUCHO 35</h2>
       </div>
     </v-col>
   </v-row>
@@ -483,17 +515,13 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img19)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
-        <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
-        </p>
+        <h2>MANETA CARTUCHO 25</h2>
       </div>
     </v-col>
   </v-row>
@@ -508,16 +536,15 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img20)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>ROCIADOR CUADRADO EXTRAPLANO 25x25cm</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Material: Acero Inox S304
         </p>
       </div>
     </v-col>
@@ -533,16 +560,15 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img21)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>ROCIADOR REDONDO EXTRAPLANO Ø25cm</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          Material: Acero Inox S304
         </p>
       </div>
     </v-col>
@@ -558,17 +584,13 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img22)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
-        <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
-        </p>
+        <h2>Mangos de ducha</h2>
       </div>
     </v-col>
   </v-row>
@@ -583,17 +605,13 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img23)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
-        <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
-        </p>
+        <h2>FLEXOS</h2>
       </div>
     </v-col>
   </v-row>
@@ -608,17 +626,13 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img24)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
-        <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
-        </p>
+        <h2>VALCULAS CLICK-CLACK</h2>
       </div>
     </v-col>
   </v-row>
@@ -633,17 +647,13 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img25)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
-        <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
-        </p>
+        <h2>BARRA DUCHA REGULABLE</h2>
       </div>
     </v-col>
   </v-row>
@@ -658,17 +668,13 @@ onMounted(() => {
         height="300"
         contain
         class="cursor-pointer"
-        @click="openImage(img1)"
+        @click="openImage(img26)"
       />
     </v-col>
 
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
-        <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
-        </p>
+        <h2>SOPORTES</h2>
       </div>
     </v-col>
   </v-row>

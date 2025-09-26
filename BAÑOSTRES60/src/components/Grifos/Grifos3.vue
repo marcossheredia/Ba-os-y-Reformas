@@ -62,10 +62,13 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO 1.1.1 MODELO XZY</h2>
+          <h2>MONOMANDO ALEXIA ABATIBLE</h2>
           <p>
-            Grifo que suelta agua de mi casa.  
-            Funciona de forma muy correcta levantas y sale agua.
+            Cuerpo grifería en latón
+            Sistema abatible 90o
+            Cartucho cerámico 40 mm
+            Aireador Neopearl.
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>
@@ -88,9 +91,10 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO COCINA QUADRA</h2>
           <p>
-            Otro grifo con características diferentes.
+            Cartucho cerámico 35 mm
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>
@@ -106,15 +110,16 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img3)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO COCINA ROUND</h2>
           <p>
-            Otro grifo con características diferentes.
+            Cartucho cerámico 35 mm
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>
@@ -125,20 +130,21 @@ onMounted(() => {
     <v-row>
       <v-col cols="12" md="6">
         <v-img
-          :src="img4"
+          :src="img3"
           alt="Descripción de la imagen 2"
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img3)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO COCINA NOAH</h2>
           <p>
-            Otro grifo con características diferentes.
+            Cartucho cerámico 35 mm
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>
@@ -154,15 +160,19 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img5)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO OSMOSIS EXTRAIBLE ACERO</h2>
           <p>
-            Otro grifo con características diferentes.
+            Sistema extraíble
+            Cuerpo grifería en acero Inox 304 cepillado
+            Cartucho 35 mm
+            Flexo doble engatillado
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>
@@ -178,15 +188,17 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img6)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO COCINA EXTRAIBLE ROUND</h2>
           <p>
-            Otro grifo con características diferentes.
+            Cartucho cerámico 40 mm
+            Salida 2 funciones
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>
@@ -202,15 +214,17 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img7)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO COCINA SILVER CROMO</h2>
           <p>
-            Otro grifo con características diferentes.
+            Cuerpo grifería en latón cromado
+            Cartucho cerámico 25 mm
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>
@@ -226,15 +240,18 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img8)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO COCINA OSMOSIS ACERO</h2>
           <p>
-            Otro grifo con características diferentes.
+            Cuerpo grifería en acero Inox 304 cepillado
+            Cartucho cerámico 35 mm
+            Latiguillos 3/8” CE
+            Acabado acero cepillado.
           </p>
         </div>
       </v-col>
@@ -250,15 +267,17 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img9)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO COCINA EXTRAIBLE DESIGN CROMO</h2>
           <p>
-            Otro grifo con características diferentes.
+            Cuerpo grifería en latón cromado
+            Cartucho cerámico 25 mm
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>
@@ -274,15 +293,18 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img10)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>GRIFO MODELO ABC</h2>
+          <h2>MONOMANDO DIOR CROMO</h2>
           <p>
-            Otro grifo con características diferentes.
+            Cuerpo grifería en latón cromado
+            Cartucho cerámico 25 mm
+            Aireador cascada
+            Latiguillos 3/8” CE
           </p>
         </div>
       </v-col>

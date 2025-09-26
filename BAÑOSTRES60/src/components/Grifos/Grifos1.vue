@@ -89,10 +89,13 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO SIRIO</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón
+              Cartucho cerámico 25 mm cold-start
+              Limitador de caudal ecológico 5 L/min
+              Aireador Neoperl
+              Latiguillos 3/8” CE
             </p>
           </div>
       </v-col>
@@ -141,10 +144,13 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO HELIOS</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón
+              Cartucho cerámico 25 mm cold-start
+              Limitador de caudal ecológico 5 L/min
+              Aireador Neoperl
+              Latiguillos 3/8” CE
             </p>
           </div>
       </v-col>
@@ -193,10 +199,13 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO MARRIOT</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón
+              Cartucho cerámico 25 mm cold-start
+              Limitador de caudal ecológico 5 L/min
+              Aireador Neoperl
+              Latiguillos 3/8” CE
             </p>
           </div>
       </v-col>
@@ -245,10 +254,13 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO CASSIO</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón
+              Cartucho cerámico 25 mm cold-start
+              Limitador de caudal ecológico 5 L/min
+              Aireador Neoperl
+              Latiguillos 3/8” CE
             </p>
           </div>
       </v-col>
@@ -297,10 +309,14 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO TARSIO</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón
+              Cartucho cerámico 26 mm
+              Limitador de caudal ecológico 5 L/min
+              Latiguillos 3/8” CE
+              Maneta integrada
+              Aireador Neoperl
             </p>
           </div>
       </v-col>
@@ -349,10 +365,13 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO MIO</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón
+              Cartucho cerámico 25 mm cold-start
+              Limitador de caudal ecológico 5 L/min
+              Aireador Neoperl
+              Latiguillos 3/8” CE
             </p>
           </div>
       </v-col>
@@ -401,10 +420,13 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO SION</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón cromado
+              Cartucho cerámico 35 mm cold start
+              Limitador de caudal ecológico 5 L/min
+              Aireador Neoperl
+              Latiguillos 3/8” CE
             </p>
           </div>
       </v-col>
@@ -453,10 +475,11 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO ORION</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón cromado
+              Cartucho cerámico 25 mm
+              Latiguillos 3/8” CE
             </p>
           </div>
       </v-col>
@@ -505,10 +528,13 @@ onMounted(() => {
         <!-- Arriba derecha: texto/información -->
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
           <div class="pa-4 text-center">
-            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <h2>GRIFO RHIO</h2>
             <p>
-              Grifo que suelta agua de mi casa.  
-              Funciona de forma muy correcta levantas y sale agua.
+              Grifería en latón
+              Cartucho cerámico 35 mm
+              Limitador de caudal ecológico 5 L/min
+              Latiguillos 3/8” CE
+              Aireador Neoperl
             </p>
           </div>
       </v-col>
