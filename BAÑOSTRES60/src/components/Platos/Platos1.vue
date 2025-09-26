@@ -100,7 +100,7 @@ onMounted(() => {
     <v-container>
       <v-row justify="center">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">GRIFOS DE LAVABO</h1>
+          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">PLATOS DE DUCHA</h1>
         </v-col>
       </v-row>
     </v-container>
@@ -1041,94 +1041,156 @@ onMounted(() => {
 
 </template>
 
+
 <style scoped>
+/* ===========================
+   Espejos1 – Estilos de página
+   Tema basado en cian (logo)
+   =========================== */
 
-:host{
-  --nav-bg:#0D3642;     /* azul corporativo */
-  --accent:#00BCD4;     /* cian */
-  --accent-2:#58B7AE;   /* verde-agua */
-  --orange:#F6911D;     /* naranja detalle */
-  --ink:#23424a;        /* texto sobre fondos claros */
+:host, .servicios-header, .py-8, .v-container {
+  --primary: var(--color-primary, #00bcd4);
+  --primary-dark: var(--color-primary-dark, #0097a7);
+  --primary-light: var(--color-primary-light, #b2ebf2);
+  --bg: var(--color-bg, #f7fafb);
+  --surface: var(--color-surface, #ffffff);
+  --text: var(--color-text, #1f2a33);
+  --muted: var(--color-text-light, #6b7b85);
 }
 
-/* ====== CABECERA / HERO ====== */
-.servicios-header{
-  background:#f5f7f8 !important;
-  border-bottom: 1px solid rgba(0,0,0,.06);
+/* ===== Cabecera (tira superior con título) ===== */
+.servicios-header {
+  background: var(--surface); /* fondo limpio sin degradado */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-block: clamp(24px, 5vw, 48px) !important;
 }
-h1{
+
+.servicios-header h1 {
   position: relative;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  color: var(--nav-bg);
-  letter-spacing:.3px;
+  color: var(--primary-dark);
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
-h1::after{
-  content:'';
-  position:absolute;
-  left:50%; bottom:-10px;
+
+/* Línea decorativa bajo el H1 */
+.servicios-header h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
   transform: translateX(-50%);
-  width:100px; height:4px;
-  border-radius:3px;
-  background: var(--orange);
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--primary);
 }
 
-/* ====== INTRO ====== */
-.servicios-intro{
-  line-height: 1.8;
-  color: var(--ink);
-  margin: 1.5rem auto 0;
-  text-align: center;
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 1rem 1.25rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+/* ===== Bloques (repetidos) ===== */
+.v-container {
+  background: transparent;
 }
 
-/* ====== BLOQUES IMAGEN / TEXTO ====== */
-.cursor-pointer{ cursor: pointer; }
-
-.pa-4.text-center{
-  background:#ffffff;
-  border-radius:14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.06);
-  border: 1px solid rgba(0,0,0,.04);
-}
-.pa-4.text-center h2{
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: var(--nav-bg);
-  margin-bottom:.25rem;
-}
-.pa-4.text-center p{
-  color: var(--ink);
-  margin:0;
+.py-8 {
+  padding-block: clamp(24px, 6vw, 56px) !important;
 }
 
-/* Imagenes Vuetify: bordes suaves + sombra sutil */
-:deep(.v-img){
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.06);
-  background:#fafafa;
-  overflow:hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-:deep(.v-img:hover){
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,.10);
+/* Títulos de cada espejo */
+h2 {
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: 8px;
 }
 
-/* ====== PRINT ====== */
-@media print{
-  .servicios-header{ display:none; }
+/* Párrafos descriptivos */
+p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 960px){
-  .servicios-intro{ padding: .9rem 1rem; }
-  :deep(.v-img){ box-shadow: 0 6px 16px rgba(0,0,0,.05); }
+/* ===== Imágenes (v-img) ===== */
+.cursor-pointer { cursor: pointer; }
+
+:deep(.v-img) {
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  background: var(--surface);
+  transition: transform .22s ease, box-shadow .22s ease;
 }
-@media (max-width: 600px){
-  h1{ font-size: 1.8rem; }
+
+:deep(.v-img:hover) {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.10);
+}
+
+/* Altos visuales coherentes */
+:deep(.v-img[height="300"]) { aspect-ratio: 4/3; object-fit: cover; }
+:deep(.v-img[height="250"]) { aspect-ratio: 16/9; object-fit: contain; }
+
+/* Caja de texto a la derecha de cada imagen */
+.pa-4.text-center {
+  background: var(--surface);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: clamp(14px, 2vw, 22px) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* ===== Diálogo de imagen ampliada ===== */
+:deep(.v-dialog .v-card) {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+}
+
+:deep(.v-dialog .v-card-actions) {
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 16px;
+}
+
+/* Botón Cerrar (color de marca) */
+:deep(.v-btn[color="primary"]) {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+:deep(.v-btn[color="primary"]:hover) {
+  background: var(--primary-dark) !important;
+}
+
+/* ===== Separadores sutiles entre bloques ===== */
+.v-container + .v-container {
+  border-top: 1px dashed rgba(0,0,0,0.06);
+}
+
+/* ===== Soporte de impresión ===== */
+@media print {
+  .servicios-header { display: none; }
+  :deep(.v-dialog) { display: none !important; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 960px) {
+  .pa-4.text-center {
+    box-shadow: none;
+  }
+  :deep(.v-img[height="300"]),
+  :deep(.v-img[height="250"]) {
+    aspect-ratio: auto;
+  }
+}
+
+/* ===== Detalles opcionales ===== */
+/* Dar un pequeño borde al pasar por encima del texto para “clicabilidad” visual */
+.pa-4.text-center:hover {
+  border-color: rgba(0,188,212,0.25);
+}
+
+/* Atenuar muy ligeramente los contenedores para que el ojo descanse entre bloques */
+.v-row + .v-row {
+  margin-top: 8px !important;
 }
 </style>
+
+
+

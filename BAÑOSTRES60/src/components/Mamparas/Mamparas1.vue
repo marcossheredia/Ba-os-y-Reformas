@@ -113,7 +113,7 @@ onMounted(() => {
     <v-container>
       <v-row justify="center">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">ESPEJOS</h1>
+          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">MAMPARAS CORREDERAS</h1>
         </v-col>
         <v-col cols="12" md="10" lg="8">
           
@@ -1092,104 +1092,156 @@ onMounted(() => {
 
 </template>
 
+
 <style scoped>
-:host{
-  --primary: #00bcd4;        /* cian corporativo */
-  --primary-dark:#0097a7;
-  --text:#0b3340;
-  --muted:#23424a;
-  --bg:#f6f8f8;
+/* ===========================
+   Espejos1 – Estilos de página
+   Tema basado en cian (logo)
+   =========================== */
+
+:host, .servicios-header, .py-8, .v-container {
+  --primary: var(--color-primary, #00bcd4);
+  --primary-dark: var(--color-primary-dark, #0097a7);
+  --primary-light: var(--color-primary-light, #b2ebf2);
+  --bg: var(--color-bg, #f7fafb);
+  --surface: var(--color-surface, #ffffff);
+  --text: var(--color-text, #1f2a33);
+  --muted: var(--color-text-light, #6b7b85);
 }
 
-/* Header / título */
-.servicios-header{
-  background: linear-gradient(180deg,#eef8fa, #ffffff);
-  border-bottom: 1px solid rgba(0,0,0,.06);
+/* ===== Cabecera (tira superior con título) ===== */
+.servicios-header {
+  background: var(--surface); /* fondo limpio sin degradado */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-block: clamp(24px, 5vw, 48px) !important;
 }
-h1{
+
+.servicios-header h1 {
   position: relative;
-  color: var(--text);
-  letter-spacing:.5px;
+  color: var(--primary-dark);
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
-h1::after{
-  content:'';
-  position:absolute;
-  bottom:-10px;
-  left:50%;
-  transform:translateX(-50%);
-  width:120px;
-  height:4px;
-  border-radius:2px;
+
+/* Línea decorativa bajo el H1 */
+.servicios-header h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
   background: var(--primary);
 }
 
-/* Bloques y tipografía */
-.v-container.py-8{ padding-top:clamp(24px,4vw,56px) !important; padding-bottom:clamp(24px,4vw,56px) !important; }
-.pa-4.text-center h2{
+/* ===== Bloques (repetidos) ===== */
+.v-container {
+  background: transparent;
+}
+
+.py-8 {
+  padding-block: clamp(24px, 6vw, 56px) !important;
+}
+
+/* Títulos de cada espejo */
+h2 {
   color: var(--text);
-  font-weight:700;
-  margin-bottom:.25rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: 8px;
 }
-.pa-4.text-center p{
+
+/* Párrafos descriptivos */
+p {
   color: var(--muted);
-  margin:0;
-  line-height:1.6;
+  line-height: 1.7;
+  margin: 0;
 }
 
-/* Imágenes */
-.v-col :deep(.v-img){
-  border-radius:14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
-  transition: transform .25s ease, box-shadow .25s ease;
-  background:#fff;
-}
-.v-col :deep(.v-img:hover){
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0,0,0,.12);
-}
-.cursor-pointer{ cursor:pointer; }
+/* ===== Imágenes (v-img) ===== */
+.cursor-pointer { cursor: pointer; }
 
-/* Fila con imagen centrada (las segundas filas de cada bloque) */
-.d-flex.justify-center :deep(.v-img){
-  max-width: min(920px, 100%);
-  width: 100%;
-  border-radius: 14px;
+:deep(.v-img) {
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  background: var(--surface);
+  transition: transform .22s ease, box-shadow .22s ease;
 }
 
-/* Diálogo de imagen */
-:deep(.v-dialog .v-card){
-  border-radius:16px;
-  box-shadow: 0 18px 48px rgba(0,0,0,.25);
-}
-:deep(.v-dialog .v-img){
-  background:#000; /* mejor percepción de bordes en imágenes PNG */
-}
-:deep(.v-dialog .v-card-actions){
-  padding: 8px 16px;
-  border-top: 1px solid rgba(0,0,0,.06);
+:deep(.v-img:hover) {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.10);
 }
 
-/* Botón “Cerrar” (color primario cian) */
-:deep(.v-btn.v-btn--variant-flat){
+/* Altos visuales coherentes */
+:deep(.v-img[height="300"]) { aspect-ratio: 4/3; object-fit: cover; }
+:deep(.v-img[height="250"]) { aspect-ratio: 16/9; object-fit: contain; }
+
+/* Caja de texto a la derecha de cada imagen */
+.pa-4.text-center {
+  background: var(--surface);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: clamp(14px, 2vw, 22px) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* ===== Diálogo de imagen ampliada ===== */
+:deep(.v-dialog .v-card) {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+}
+
+:deep(.v-dialog .v-card-actions) {
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 16px;
+}
+
+/* Botón Cerrar (color de marca) */
+:deep(.v-btn[color="primary"]) {
   background: var(--primary) !important;
-  color:#fff !important;
+  color: #fff !important;
 }
-:deep(.v-btn.v-btn--variant-flat:hover){
+:deep(.v-btn[color="primary"]:hover) {
   background: var(--primary-dark) !important;
 }
 
-/* Separadores entre bloques (opcional, sutil) */
-.v-container + .v-container{
-  border-top:1px solid rgba(0,0,0,.05);
+/* ===== Separadores sutiles entre bloques ===== */
+.v-container + .v-container {
+  border-top: 1px dashed rgba(0,0,0,0.06);
 }
 
-/* Responsive */
-@media (max-width: 960px){
-  .pa-4.text-center{ padding: 8px !important; }
+/* ===== Soporte de impresión ===== */
+@media print {
+  .servicios-header { display: none; }
+  :deep(.v-dialog) { display: none !important; }
 }
-@media (max-width: 600px){
-  h1::after{ width:90px; }
-  .pa-4.text-center h2{ font-size:1.1rem; }
+
+/* ===== Responsive ===== */
+@media (max-width: 960px) {
+  .pa-4.text-center {
+    box-shadow: none;
+  }
+  :deep(.v-img[height="300"]),
+  :deep(.v-img[height="250"]) {
+    aspect-ratio: auto;
+  }
+}
+
+/* ===== Detalles opcionales ===== */
+/* Dar un pequeño borde al pasar por encima del texto para “clicabilidad” visual */
+.pa-4.text-center:hover {
+  border-color: rgba(0,188,212,0.25);
+}
+
+/* Atenuar muy ligeramente los contenedores para que el ojo descanse entre bloques */
+.v-row + .v-row {
+  margin-top: 8px !important;
 }
 </style>
+
+
 
