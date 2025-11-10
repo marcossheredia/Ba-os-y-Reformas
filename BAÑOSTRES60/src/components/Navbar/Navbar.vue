@@ -109,6 +109,14 @@ const handleOutsideClick = (event) => {
 let structuredDataScripts = [];
 
 const navItems = ref([
+    {
+    name: 'INICIO',
+    path: '/',              // va al home
+    title: 'Ir a la página de inicio',
+    ariaLabel: 'Inicio',
+    keywords: 'inicio, home, página principal',
+    hasSubmenu: false
+  },
   { 
     name: 'QUIENES SOMOS', 
     path: '', 
@@ -385,35 +393,6 @@ onUnmounted(() => {
     itemtype="https://schema.org/WPHeader"
   >
     <v-container class="d-flex align-center justify-center px-4" style="max-width: 1400px;">
-      <!-- Logo de la empresa -->
-      <div class="logo mr-6 hidden-sm-and-down" style="margin-left: 3rem;">
-        <a href="/" title="Página principal de SSAB450" itemscope itemtype="https://schema.org/Organization">
-          <v-img 
-            :src="logoPath" 
-            alt="SSAB450 - Especialistas en acero inoxidable" 
-            :width="scrolled ? '100' : '120'" 
-            itemprop="logo"
-            contain
-          />
-          <meta itemprop="name" content="SSAB450">
-          <meta itemprop="description" content="Especialistas en acero inoxidable y servicios industriales">
-        </a>
-      </div>
-
-      <!-- Logo para móvil sin margin-left: auto -->
-      <div class="logo mr-6 hidden-md-and-up">
-        <a href="/" title="Página principal de SSAB450" itemscope itemtype="https://schema.org/Organization">
-          <v-img 
-            :src="logoPath" 
-            alt="SSAB450 - Especialistas en acero inoxidable" 
-            :width="scrolled ? '130' : '150'" 
-            itemprop="logo"
-            contain
-          />
-          <meta itemprop="name" content="SSAB450">
-          <meta itemprop="description" content="Especialistas en acero inoxidable y servicios industriales">
-        </a>
-      </div>
       
       <!-- Menú de navegación para escritorio -->
       <v-toolbar-items class="hidden-sm-and-down flex-grow-1 justify-center" id="main-menu" itemscope itemtype="https://schema.org/SiteNavigationElement">

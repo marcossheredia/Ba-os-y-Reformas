@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import slide1 from '../../assets/imagenes/usoGeneral/Logo verde.png'
+import slide1 from '../../assets/imagenes/usoGeneral/Slide.png'
 import slide2 from '../../assets/imagenes/usoGeneral/Logo verde recortado.png'
 
 import foto1b from '../../assets/imagenes/home/foto1b.webp'
@@ -10,86 +10,42 @@ import foto3b from '../../assets/imagenes/home/foto3b.webp'
 const slides = ref([
   {
     image: slide1,
-    title: 'Aqui puedo poner informacion si quiero.',
-    description: 'Mucha mas informacion que se puede poner aqui si se quiere a a a a a a a a a a a a a.'
-  },
-  {
-    image: slide2,
-    title: 'Aqui puedo poner informacion si quiero.',
-    description: 'Mucha mas informacion que se puede poner aqui si se quiere a a a a a a a a a a a a a.'
   }
 ])
 
 const currentSlide = ref(0)
 let intervalId = null
-const progress = ref(0)
-let progressInterval = null
 
 onMounted(() => {
-  intervalId = setInterval(nextSlide, 7500) // Cambia de diapositiva cada 7.5 segundos
-  startProgress()
+  // Si solo hay 1 slide, no hace falta carrusel
+  if (slides.value.length > 1) {
+    intervalId = setInterval(nextSlide, 7500)
+  }
 })
 
 onUnmounted(() => {
   if (intervalId) clearInterval(intervalId)
-  if (progressInterval) clearInterval(progressInterval)
 })
 
-function startProgress() {
-  progress.value = 0
-  if (progressInterval) clearInterval(progressInterval)
-  progressInterval = setInterval(() => {
-    progress.value = Math.min(progress.value + 1, 100)
-  }, 75) // 7500ms / 100 steps = 75ms por paso
-}
-
-function resetTimer() {
-  if (intervalId) clearInterval(intervalId)
-  intervalId = setInterval(nextSlide, 7500)
-}
-
 function nextSlide() {
+  if (slides.value.length <= 1) return
   currentSlide.value = (currentSlide.value + 1) % slides.value.length
-  startProgress()
-  resetTimer()
-}
-
-function prevSlide() {
-  currentSlide.value = (currentSlide.value - 1 + slides.value.length) % slides.value.length
-  startProgress()
-  resetTimer()
 }
 </script>
 
-<template>
 
+<template>
   <div class="carousel">
-    <div class="slide-container" v-for="(slide, index) in slides" :key="index" v-show="currentSlide === index">
-      <div class="slide" :style="{ backgroundImage: `url(${slide.image})` }">
-      </div>
-    </div>
-    <div class="fixed-overlay">
-      <div class="nav-and-content">
-        <span @click="prevSlide">‹</span>
-        <div class="content">
-          <h1>{{ slides[currentSlide].title }}</h1>
-          <p><b>{{ slides[currentSlide].description }}</b></p>
-        </div>
-        <span @click="nextSlide">›</span>
-      </div>
-    </div>
-    <div class="progress-indicators">
-      <div 
-        v-for="(slide, index) in slides" 
-        :key="index" 
-        class="progress-line"
-        :class="{ active: currentSlide === index }"
-      >
-        <div 
-          class="progress-fill" 
-          :style="currentSlide === index ? { width: `${progress}%` } : {}"
-        ></div>
-      </div>
+    <div
+      class="slide-container"
+      v-for="(slide, index) in slides"
+      :key="index"
+      v-show="currentSlide === index"
+    >
+      <div
+        class="slide"
+        :style="{ backgroundImage: `url(${slide.image})` }"
+      ></div>
     </div>
   </div>
   
@@ -109,7 +65,7 @@ function prevSlide() {
 
     <div class="texto">
       <h1 style="font-size: 2rem; color: #000; margin-bottom: 15px;">
-        Bañostres60
+        ¡Dale una vuelta a tu baño!
       </h1>
       <p><strong>¡Renueva tu baño de manera fácil y rápida!</strong></p>
       <p>
@@ -139,7 +95,7 @@ function prevSlide() {
           <td>Cuidamos <b>detalladamente</b> cada paso del proceso</td>
         </tr>
         <tr>
-          <td>Más de <b>40 años de experiencia</b> nos avalan</td>
+          <td>Más de <b>30 años de experiencia</b> nos avalan</td>
           <td>Apostamos siempre por una <b>gestión de calidad</b></td>
         </tr>
       </tbody>
@@ -209,12 +165,21 @@ function prevSlide() {
 </template>
   <style scoped>
   /* 🎞️ Carrusel */
-  .carousel {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-  }
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 50vh;        /* antes 90vh: menos alto, menos sensación de zoom */
+  max-height: 500px;   /* por si la pantalla es muy alta */
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: contain;    /* ANTES: cover (recortaba la imagen) */
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
   .slide-container {
     position: absolute;
@@ -222,12 +187,6 @@ function prevSlide() {
     transition: opacity 0.8s ease-in-out;
   }
 
-  .slide {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
 
   /* Overlay fijo con navegación y texto */
   .fixed-overlay {
@@ -262,8 +221,8 @@ function prevSlide() {
   .content {
     text-align: center;
     max-width: 600px;
-    padding: 1rem 2rem;
-    background: rgba(0,0,0,0.5);
+    padding: 0;                /* o 0.5rem si quieres un pelín de espacio */
+    background: transparent;   /* ANTES: rgba(0,0,0,0.5) -> esto es el cuadrado gris */
     border-radius: 12px;
   }
 
