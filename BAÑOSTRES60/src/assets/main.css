@@ -88,3 +88,30 @@ p {
   line-height: 1.6;
   color: #0D3642;
 }
+
+
+/* =========================
+   AJUSTES SOLO PARA MÓVIL
+   ========================= */
+@media (max-width: 768px) {
+
+  section {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
