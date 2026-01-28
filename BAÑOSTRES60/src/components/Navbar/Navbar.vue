@@ -24,9 +24,9 @@ const checkDevice = () => {
 // Toggle submenu para menú móvil solamente
 const toggleSubmenu = (index, event) => {
   if (!isMobile.value) return;
-  
+
   event.preventDefault();
-  
+
   // Toggle solo el elemento actual
   activeDropdowns.value[index] = !activeDropdowns.value[index];
 };
@@ -34,11 +34,11 @@ const toggleSubmenu = (index, event) => {
 // Toggle nested submenu para menú móvil solamente
 const toggleNestedSubmenu = (parentIndex, childIndex, event) => {
   if (!isMobile.value) return;
-  
+
   event.preventDefault();
-  
+
   const nestedKey = `${parentIndex}-${childIndex}`;
-  
+
   // Toggle solo el elemento actual
   activeDropdowns.value[nestedKey] = !activeDropdowns.value[nestedKey];
   if (activeDropdowns.value[nestedKey]) {
@@ -96,10 +96,10 @@ const addStructuredData = () => {
 // Close dropdowns when clicking outside
 const handleOutsideClick = (event) => {
   if (isMobile.value) return; // Only handle for desktop
-  
+
   const navEl = document.getElementById('main-menu');
   if (!navEl) return;
-  
+
   if (!navEl.contains(event.target) && Object.keys(activeDropdowns.value).length > 0) {
     closeAllDropdowns();
   }
@@ -117,11 +117,11 @@ const navItems = ref([
     keywords: 'inicio, home, página principal',
     hasSubmenu: false
   },
-  { 
-    name: 'QUIENES SOMOS', 
-    path: '', 
-    title: 'Conozca más sobre nuestra empresa y nuestros valores', 
-    ariaLabel: 'Quiénes somos', 
+  {
+    name: 'QUIENES SOMOS',
+    path: '',
+    title: 'Conozca más sobre nuestra empresa y nuestros valores',
+    ariaLabel: 'Quiénes somos',
     keywords: 'empresa, valores, misión, visión, historia',
     hasSubmenu: true,
     submenu: [
@@ -130,42 +130,42 @@ const navItems = ref([
       //{ name: '¿POR QUÉ SSAB450?', path: '/por-que', title: 'Ventajas de elegir nuestros servicios industriales', ariaLabel: '¿Por qué SSAB450?' }
     ]
   },
-  { 
-    name: 'GRIFOS' , 
+  {
+    name: 'GRIFOS' ,
     path: '/',    // determinar path
     title: 'Nuestros servicios profesionales acerca de grifos',  // esto es para cuando dejas en raton sobre el boton la info que sale
-    ariaLabel: 'Servicios', 
+    ariaLabel: 'Servicios',
     keywords: 'servicios industriales, acero inoxidable, soldadura, soluciones',
-    hasSubmenu: true, 
+    hasSubmenu: true,
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Grifos Lavabo', path: '/grifos1', title: 'Catálogo completo de grifos de lavabo', ariaLabel: 'Nuestros servicios' },
       { name: 'Grifos Ducha', path: '/grifos2', title: 'Catálogo completo de grifos de ducha', ariaLabel: 'Así funciona' },
-      { 
-        name: 'Grifos Cocina', 
-        path: '/grifos3', 
-        title: 'Catálogo completo de grifos de cocina', 
+      {
+        name: 'Grifos Cocina',
+        path: '/grifos3',
+        title: 'Catálogo completo de grifos de cocina',
         ariaLabel: 'Tipos de soldadura',
         hasSubmenu: false
       }
     ]
     //*/
   },
-  { 
-    name: 'PLATOS', 
-    path: '/platos1', 
-    title: 'Catálogo completo de platos de ducha', 
-    ariaLabel: 'Laboratorio', 
+  {
+    name: 'PLATOS',
+    path: '/platos1',
+    title: 'Catálogo completo de platos de ducha',
+    ariaLabel: 'Laboratorio',
     keywords: 'laboratorio, análisis, control calidad, pruebas',
     hasSubmenu: false
   },
-  { 
-    name: 'ESPEJOS', 
-    path: '/espejos', 
-    title: 'Catálogo completo de espejos', 
-    ariaLabel: 'Maquinaria', 
+  {
+    name: 'ESPEJOS',
+    path: '/espejos',
+    title: 'Catálogo completo de espejos',
+    ariaLabel: 'Maquinaria',
     keywords: 'maquinaria industrial, equipos, tecnología',
-    hasSubmenu: false, 
+    hasSubmenu: false,
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Servicio 3.1', path: '/maquinaria/instalaciones', title: 'Instalaciones y equipamiento técnico', ariaLabel: 'Nuestras instalaciones' },
@@ -173,11 +173,11 @@ const navItems = ref([
     ]
     //*/
   },
-  { 
-    name: 'MAMPARAS', 
-    path: '', 
-    title: 'Procesos auxiliares y servicios adicionales', 
-    ariaLabel: 'Procesos Auxiliares', 
+  {
+    name: 'MAMPARAS',
+    path: '',
+    title: 'Procesos auxiliares y servicios adicionales',
+    ariaLabel: 'Procesos Auxiliares',
     keywords: 'procesos auxiliares, servicios adicionales',
     hasSubmenu: true,
     //* DESPLEGABLE PARA EL SERVICIO
@@ -187,15 +187,15 @@ const navItems = ref([
       { name: 'Mamparas Abatibles', path: '/mamparas3', title: 'Catálogo completo de mamparas abatibles', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
       { name: 'Mamparas Plegables', path: '/mamparas4', title: 'Catálogo completo de mamparas plegables', ariaLabel: 'Logística', component: 'Logistica.vue' },
       { name: 'Otras soluciones', path: '/mamparas5', title: 'Catálogo completo de otras soluciones para mamparas', ariaLabel: 'Logística', component: 'Logistica.vue' }
-    
+
     ]
     //*/
   },
-  { 
-    name: 'CONTACTO', 
-    path: '/contacto', 
-    title: 'Contacte con nosotros para más información', 
-    ariaLabel: 'Contacto', 
+  {
+    name: 'CONTACTO',
+    path: '/contacto',
+    title: 'Contacte con nosotros para más información',
+    ariaLabel: 'Contacto',
     keywords: 'contacto, ubicación, teléfono, email',
     hasSubmenu: false
   }
@@ -221,7 +221,7 @@ const toggleMenu = () => {
   drawer.value = !drawer.value;
   isMenuOpen.value = drawer.value;
   document.body.style.overflow = isMenuOpen.value ? 'hidden' : '';
-  
+
   // Si se cierra el menú, limpiar todos los submenús abiertos
   if (!isMenuOpen.value) {
     closeAllDropdowns();
@@ -238,7 +238,7 @@ const handleHashNavigation = (path) => {
   // Check if path contains a hash
   if (path && path.includes('#')) {
     const [routePath, hash] = path.split('#');
-    
+
     // Si ya estamos en la ruta correcta, solo desplazamos al ancla
     if (window.location.pathname === routePath || routePath === '') {
       setTimeout(() => {
@@ -273,36 +273,36 @@ const handleKeyDown = (event) => {
       event.preventDefault();
       return;
     }
-    
+
     if (isMenuOpen.value) {
       toggleMenu();
       event.preventDefault();
       return;
     }
   }
-  
+
   // Handle Enter or Space on menu items with submenus (for accessibility)
-  if ((event.key === 'Enter' || event.key === ' ') && 
-      event.target.classList.contains('nav-link') && 
+  if ((event.key === 'Enter' || event.key === ' ') &&
+      event.target.classList.contains('nav-link') &&
       event.target.getAttribute('aria-haspopup') === 'true') {
-    
+
     const index = parseInt(event.target.getAttribute('data-index'));
     if (!isNaN(index) && isMobile.value) {
       toggleSubmenu(index, event);
       event.preventDefault();
     }
   }
-  
+
   // Handle Tab key for focus trap in mobile menu
   if (isMenuOpen.value && event.key === 'Tab') {
     // If no focusable elements, do nothing
     if (!firstFocusableElement.value || !lastFocusableElement.value) return;
-    
+
     // Shift+Tab on first element should go to last element
     if (event.shiftKey && document.activeElement === firstFocusableElement.value) {
       event.preventDefault();
       lastFocusableElement.value.focus();
-    } 
+    }
     // Tab on last element should go to first element
     else if (!event.shiftKey && document.activeElement === lastFocusableElement.value) {
       event.preventDefault();
@@ -340,7 +340,7 @@ onMounted(() => {
   document.addEventListener('click', handleOutsideClick);
   checkScroll(); // Check initial scroll position
   checkDevice(); // Check initial device size
-  
+
   // Check if URL has a hash on page load
   if (window.location.hash) {
     const hash = window.location.hash.substring(1);
@@ -351,7 +351,7 @@ onMounted(() => {
       }
     }, 500); // Delay to ensure page has loaded
   }
-  
+
   // Add structured data to head
   structuredDataScripts = addStructuredData();
 });
@@ -362,10 +362,10 @@ onUnmounted(() => {
   window.removeEventListener('keydown', handleKeyDown);
   window.removeEventListener('resize', checkDevice);
   document.removeEventListener('click', handleOutsideClick);
-  
+
   // Reset body overflow in case component is unmounted with menu open
   document.body.style.overflow = '';
-  
+
   // Remove structured data scripts
   structuredDataScripts.forEach(script => {
     if (script && script.parentNode) {
@@ -378,9 +378,9 @@ onUnmounted(() => {
 <template>
   <!-- Enlace de accesibilidad para saltar al contenido principal -->
   <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
-  
+
   <!-- Barra de navegación principal usando componentes Vuetify -->
-  <v-app-bar 
+  <v-app-bar
     :elevation="navbarElevation"
     color="white"
     :height="navbarHeight"
@@ -393,7 +393,7 @@ onUnmounted(() => {
     itemtype="https://schema.org/WPHeader"
   >
     <v-container class="d-flex align-center justify-center px-4" style="max-width: 1400px;">
-      
+
       <!-- Menú de navegación para escritorio -->
       <v-toolbar-items class="hidden-sm-and-down flex-grow-1 justify-center" id="main-menu" itemscope itemtype="https://schema.org/SiteNavigationElement">
         <template v-for="(item, index) in navItems" :key="item.path">
@@ -427,7 +427,7 @@ onUnmounted(() => {
                   <meta itemprop="position" :content="index + 1">
                   <meta itemprop="description" :content="item.title">
                   <meta itemprop="keywords" :content="item.keywords">
-                  
+
                   <v-icon
                     size="small"
                     class="ml-1"
@@ -437,7 +437,7 @@ onUnmounted(() => {
                   </v-icon>
                 </v-btn>
               </template>
-              
+
               <!-- Contenido del submenú -->
               <v-list
                 density="compact"
@@ -469,7 +469,7 @@ onUnmounted(() => {
                       </template>
                     </v-list-item>
                   </template>
-                  
+
                   <!-- Elemento de submenú con otro nivel de submenú -->
                   <template v-else>
                     <v-list-group
@@ -493,7 +493,7 @@ onUnmounted(() => {
                           </template>
                         </v-list-item>
                       </template>
-                      
+
                       <!-- Tercer nivel de submenú -->
                       <v-list-item
                         v-for="(nestedItem, nestedIndex) in subitem.submenu"
@@ -540,20 +540,20 @@ onUnmounted(() => {
               <meta itemprop="keywords" :content="item.keywords">
             </v-btn>
           </template>
-          
+
           <!-- Separador vertical entre elementos -->
-          <v-divider 
-            v-if="index < navItems.length - 1" 
-            vertical 
+          <v-divider
+            v-if="index < navItems.length - 1"
+            vertical
             class="hidden-sm-and-down mx-1"
             aria-hidden="true"
           ></v-divider>
         </template>
       </v-toolbar-items>
-      
+
       <!-- Botón de menú para móviles -->
       <v-btn
-        class="hidden-md-and-up ml-auto mr-2" 
+        class="hidden-md-and-up ml-auto mr-2"
         icon
         @click="toggleMenu"
         :aria-expanded="isMenuOpen"
@@ -565,7 +565,7 @@ onUnmounted(() => {
       </v-btn>
     </v-container>
   </v-app-bar>
-  
+
   <!-- Menú lateral para móviles -->
   <v-navigation-drawer
     v-model="drawer"
@@ -579,8 +579,8 @@ onUnmounted(() => {
     aria-label="Menú de navegación móvil"
     elevation="16"
   >
-    <v-list class="pt-4">      
-      
+    <v-list class="pt-4">
+
       <!-- Botón para cerrar el menú móvil -->
       <div class="d-flex justify-end pa-1 mr-2">
         <v-btn
@@ -594,7 +594,7 @@ onUnmounted(() => {
           <v-icon>mdi-close</v-icon>
         </v-btn>
       </div>
-      
+
       <!-- Elementos del menú móvil con v-list-group para submenús -->
       <template v-for="(item, index) in navItems" :key="item.path">
         <!-- Elemento sin submenú -->
@@ -618,7 +618,7 @@ onUnmounted(() => {
           </v-list-item>
           <v-divider></v-divider>
         </template>
-        
+
         <!-- Elemento con submenú -->
         <template v-else>
           <v-list-group
@@ -643,7 +643,7 @@ onUnmounted(() => {
                 </template>
               </v-list-item>
             </template>
-            
+
             <!-- Submenú nivel 1 -->
             <template v-for="(subitem, subIndex) in item.submenu" :key="`${index}-${subIndex}`">
               <!-- Submenú simple -->
@@ -666,7 +666,7 @@ onUnmounted(() => {
                   </template>
                 </v-list-item>
               </template>
-              
+
               <!-- Submenú anidado -->
               <template v-else>
                 <v-list-group
@@ -690,7 +690,7 @@ onUnmounted(() => {
                       </template>
                     </v-list-item>
                   </template>
-                  
+
                   <!-- Submenú nivel 2 -->
                   <v-list-item
                     v-for="(nestedItem, nestedIndex) in subitem.submenu"
@@ -721,6 +721,9 @@ onUnmounted(() => {
     </v-list>
   </v-navigation-drawer>
 </template>
+
+
+
 /* ============================
    NAVBAR STYLE - BAÑOS TRES60
    ============================ */
@@ -768,20 +771,7 @@ onUnmounted(() => {
   background-color: #46a199 !important; /* verde agua más oscuro */
 }
 
-/* Responsive: centrar links en móvil */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 1rem;
-  }
 
-  .nav-link {
-    margin: 0.5rem 0;
-  }
 
-  .nav-btn {
-    width: 100%;
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-}
+
+

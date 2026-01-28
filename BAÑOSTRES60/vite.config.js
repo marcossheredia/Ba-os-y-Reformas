@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base: '/', // 👈 ESTO ES LO CRÍTICO
   define: {
     'process.env': {}
   },

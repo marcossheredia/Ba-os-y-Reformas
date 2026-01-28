@@ -1,5 +1,7 @@
 @import './base.css';
 
+
+
 /* Global styles */
 body {
   margin: 0;
@@ -90,28 +92,21 @@ p {
 }
 
 
-/* =========================
-   AJUSTES SOLO PARA MÓVIL
-   ========================= */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 
   section {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
 
-  .container {
-    padding: 0 0.75rem;
-  }
-
-  .hero {
-    padding: 3rem 1rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
+  .container,
+  .wrapper,
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
   }
 }
+

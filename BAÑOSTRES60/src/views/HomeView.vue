@@ -4,5 +4,6 @@ import home from '../components/Home/home.vue';
 
 
 <template>
+
     <home />
 </template>

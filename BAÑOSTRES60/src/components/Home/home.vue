@@ -59,10 +59,10 @@ function nextSlide() {
       :key="index"
       v-show="currentSlide === index"
     >
-      <div
-        class="slide"
-        :style="{ backgroundImage: `url(${slide.image})` }"
-      ></div>
+    <div
+      class="slide slide-logo"
+      :style="{ backgroundImage: `url(${slide.image})` }"
+    ></div>
     </div>
   </div>
 
@@ -192,7 +192,13 @@ function nextSlide() {
 .slide {
   width: 100%;
   height: 100%;
-  background-size: contain;    /* ANTES: cover (recortaba la imagen) */
+  background-size: cover;    /* ANTES: cover (recortaba la imagen) */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide-logo {
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -380,24 +386,7 @@ function nextSlide() {
   }
 
   /* 📱 Responsive */
-  @media (max-width: 768px) {
-    .carousel {
-      height: 60vh;
-    }
-    .nav-and-content span {
-      font-size: 2rem;
-    }
-    .content h1 {
-      font-size: 1.5rem;
-    }
-    .imagenes {
-      grid-template-columns: 1fr;
-    }
-    .img-right {
-      grid-row: auto;
-      grid-column: auto;
-    }
-  }
+
   .banera-section {
     padding: 5rem 2rem;
     background: #f9f9f9;
@@ -451,23 +440,7 @@ function nextSlide() {
     line-height: 1.5;
   }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .banera-container {
-      flex-direction: column;
-    }
-    .banera-container .texto h2,
-    .banera-container .texto p {
-      text-align: center;
-    }
-    .banera-container .imagenes {
-      grid-template-columns: 1fr;
-    }
-    .banera-container .img-right {
-      grid-row: auto;
-      grid-column: auto;
-    }
-  }
+
   /* --- Layout general --- */
   .banera-section{
     padding: clamp(24px, 5vw, 56px) 0;
@@ -533,18 +506,6 @@ function nextSlide() {
   .texto .cta{ margin-top: 10px; font-weight: 700; color:#0b3340; }
 
   /* --- Responsive --- */
-  @media (max-width: 980px){
-    .banera-container{
-      grid-template-columns: 1fr;
-    }
-    .imagenes{
-      order: 2;                   /* texto arriba, imágenes abajo (puedes quitarlo si no lo quieres) */
-      grid-template-columns: repeat(3, 1fr);  /* 3 columnas en móvil ancho */
-      grid-template-areas:
-        "lt rt lm"
-        "rm lb rb";
-    }
-  }
 
   /* --- Conócenos (aislado para que no choque con otras secciones) --- */
   .conocenos-section {
@@ -602,15 +563,76 @@ function nextSlide() {
   }
 
   /* Móvil: 1 columna; la imagen “right” pasa al medio */
-  @media (max-width: 768px) {
-    .conocenos-imagenes {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "lt"
-        "r"
-        "lb";
-      grid-auto-rows: minmax(160px, 40vw);
-    }
+
+
+/* ========================= */
+/* 📱 MÓVIL – DEFINITIVO */
+/* ========================= */
+@media (max-width: 768px) {
+
+  /* 🔹 HERO */
+  .carousel {
+    height: 30vh;
   }
+
+  .slide {
+    background-size: contain;
+    background-position: center;
+  }
+
+  /* 🔹 CONÓCENOS */
+  .conocenos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .conocenos-imagenes {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .conocenos-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .conocenos-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 🔹 BAÑERA */
+  .banera-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .imagenes {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .img {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* 🔹 TEXTO */
+  .texto {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+
+
 
   </style>

@@ -20,7 +20,7 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
               contain
             />
           </v-col>
-          
+
           <!-- Enlaces y contacto -->
           <v-col cols="12" sm="auto" class="d-flex flex-column flex-sm-row align-center">
             <v-btn
@@ -30,10 +30,10 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
             >
               Aviso Legal
             </v-btn>
-            
+
             <v-divider vertical class="d-none d-sm-block mx-4" color="white"></v-divider>
             <v-divider class="d-block d-sm-none my-2" color="white" width="80%"></v-divider>
-            
+
             <v-btn
               href="mailto:duchastres60@gmail.com"
               variant="text"
@@ -42,10 +42,10 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
               <v-icon start size="small" class="mr-1">mdi-email-outline</v-icon>
               duchastres60@gmail.com
             </v-btn>
-            
+
             <v-divider vertical class="d-none d-sm-block mx-4" color="white"></v-divider>
             <v-divider class="d-block d-sm-none my-2" color="white" width="80%"></v-divider>
-            
+
             <v-btn
               href="tel:+34661805952"
               variant="text"
@@ -113,14 +113,7 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  .footer-link {
-    font-size: 0.85rem !important;
-    margin: 0.3rem 0 !important;
-  }
-  
-  .copyright-text {
-    font-size: 0.8rem;
-  }
-}
+
+
+
 </style>
