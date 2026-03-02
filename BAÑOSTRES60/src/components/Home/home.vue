@@ -49,12 +49,15 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
         </svg>
       </div>
       -->
-      <h1 class="company-name">BAÑOS TRES 60</h1>
-      <p class="company-tagline">Baños adaptados. Cambios de bañera por ducha.</p>
+      <h1 class="company-name">BAÑOS TRES<strong>60</strong></h1>
+
       <!-- llamada de atención secundaria -->
       <div class="hero-cta">
         <span class="hero-cta-text">¡Cambio de bañera por plato de ducha!</span>
       </div>
+
+      <p class="company-tagline">Adaptamos el baño a tus necesidades.</p>
+
     </div>
   </div>
 
@@ -230,6 +233,10 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     text-transform: uppercase;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
   }
+  .company-name strong {
+    color: #5DAFB3; /* Sustituye este código por el color que quieras */
+    font-weight: bold; /* Para asegurar que resalte, aunque ya sea un strong */
+}
 
   .company-tagline {
     font-family: 'Lobster', cursive;
