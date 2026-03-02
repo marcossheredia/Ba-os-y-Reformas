@@ -51,6 +51,10 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
       -->
       <h1 class="company-name">BAÑOS TRES 60</h1>
       <p class="company-tagline">Baños adaptados. Cambios de bañera por ducha.</p>
+      <!-- llamada de atención secundaria -->
+      <div class="hero-cta">
+        <span class="hero-cta-text">¡Cambio de bañera por plato de ducha!</span>
+      </div>
     </div>
   </div>
 
@@ -180,6 +184,9 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 </template>
 
 <style scoped>
+  /* import fonts for header */
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@700&display=swap');
+
   /* 🎯 HERO HEADER CON TEXTO */
   .hero-header {
     width: 100%;
@@ -213,21 +220,44 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
   }
 
   .company-name {
-    font-size: clamp(32px, 6vw, 56px);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(36px, 7vw, 64px);
     font-weight: 800;
     color: #0b3340;
     margin: 0;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     line-height: 1.1;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
   }
 
   .company-tagline {
-    font-size: clamp(16px, 2vw, 22px);
-    color: #23424a;
+    font-family: 'Lobster', cursive;
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: #5DAFB3;
     margin: 0;
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: -4px;
+  }
+  .hero-cta {
+    margin-top: 1rem;
+  }
+  .hero-cta-text {
+    display: inline-block;
+    background: #58B7AE;
+    color: #fff;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 700;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: pulse 2.5s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
   }
 
 

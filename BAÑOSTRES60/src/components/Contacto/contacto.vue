@@ -124,7 +124,7 @@ const enviarFormulario = async () => {
           <input type="email" v-model="email" placeholder="Email *" required>
         </div>
         <div class="form-grupo">
-          <input type="tel" v-model="telefono" placeholder="Teléfono (opcional)">
+          <input type="tel" v-model="telefono" placeholder="Teléfono " required>
         </div>
         <div class="form-grupo" v-if="mostrarCV">
           <label for="pdf-upload" class="pdf-label">
