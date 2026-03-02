@@ -151,7 +151,18 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
   </div>
 </section>
 
-
+<section class="mapa-ubicacion">
+      <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6249220943014!2d-3.3706795250006976!3d40.48356217142898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424912b7372f4b%3A0x71d49bab96654b45!2sCalle%20Diego%20de%20Torres%2C%205%2C%2028802%20Alcal%C3%A1%20de%20Henares%2C%20Madrid!5e0!3m2!1ses!2ses!4v1756914418984!5m2!1ses!2ses"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+</section>
 
 <section class="confian-section">
   <div class="confian-container">
@@ -338,6 +349,16 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     font-size: 1rem;
     line-height: 1.5;
   }
+
+  /*Ubicacion mapa estilo*/
+
+  .mapa-ubicacion {
+  width: 100%;
+  height: 450px;
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
   /* ⭐ Sección Mejor opción */
   .mejor-opcion-section {

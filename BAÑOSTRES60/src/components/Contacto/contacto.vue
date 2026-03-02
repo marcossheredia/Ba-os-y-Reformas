@@ -96,7 +96,8 @@ const enviarFormulario = async () => {
           <div>
             <h3><b>Horario</b> <i class="fa-solid fa-clock" style="color: black; font-size: large;"></i></h3>
             <p>Lunes a Viernes:  </p>
-            <p>9:00 - 14:00 | 16:00 - 19:00. </p>
+            <p>17:00 - 20:00.</p>
+            <p>09:00 - 14:00. Con cita previa. </p>
           </div>
         </div>
         <div class="dato">
