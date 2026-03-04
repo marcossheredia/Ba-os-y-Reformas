@@ -298,7 +298,8 @@ const navbarElevation = computed(() => scrolled.value ? 4 : 1);
 const navbarHeight = computed(() => scrolled.value ? 64 : 80);
 
 // Dynamic image import for the logo with spaces in filename
-const faviconPath = new URL('@/assets/imagenes/usoGeneral/logo_iconoPagina.png', import.meta.url).href;
+// use new green logo for favicon (path contains space)
+const faviconPath = new URL('@/assets/imagenes/usoGeneral/Logo verde.png', import.meta.url).href;
 
 // Añadir el favicon dinámicamente
 onMounted(() => {
