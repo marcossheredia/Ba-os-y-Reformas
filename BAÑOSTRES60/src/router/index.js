@@ -19,29 +19,6 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
-    },
-    {
-      path: '/servicios',
-      name: 'servicios',
-      component: () => import('../views/ServiciosView.vue'),
-    },
-    {
-      path: '/procesos-auxiliares',
-      name: 'procesos-auxiliares',
-      component: () => import('../components/Procesos/ProcesosAuxiliares.vue'),
-    },
-    {
-      path: '/todo-servicios',
-      name: 'todo-servicios',
-      component: () => import('../views/TodoServiciosView.vue'),
-    },
-    {
       path: '/contacto',
       name: 'contacto',
       component: () => import('@/views/ContactoView.vue')
@@ -57,34 +34,19 @@ const router = createRouter({
       component: () => import('@/components/Cookies/PoliticaCookies.vue')
     },
     {
-      path: '/laboratorio',
-      name: 'laboratorio',
-      component: () => import('../components/Laboratorio/Laboratorio.vue'),
-    },
-    {    
       path: '/sobre-nosotros',
       name: 'sobre-nosotros',
       component: () => import('../views/sobreNosotrosView.vue')
     },
-    {    
+    {
       path: '/mision',
       name: 'mision',
       component: () => import('../views/NuestraMisionView.vue')
     },
-    {    
+    {
       path: '/por-que',
       name: 'por-que-nosotros',
       component: () => import('../views/PorQueView.vue')
-    },
-    {
-      path: '/maquinaria/industria',
-      name: 'industria',
-      component: () => import('../components/Maquinaria/Industria.vue')
-    },
-    {
-      path: '/maquinaria/instalaciones',
-      name: 'nuestras-instalaciones',
-      component: () => import('../components/Maquinaria/NuestrasInstalaciones.vue')
     },
     {
       path: '/grifos1',
@@ -135,7 +97,7 @@ const router = createRouter({
       path: '/espejos',
       name: 'espejos',
       component: () => import('../components/Espejos/Espejos1.vue'),
-    }         
+    }
   ],
 })
 
